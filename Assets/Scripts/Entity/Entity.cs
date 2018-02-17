@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Inventory;
-using JetBrains.Annotations;
 
 namespace Entity {
     /// <summary>
@@ -15,6 +14,7 @@ namespace Entity {
         public Attribute MentalResist = new Attribute(0);
 
         public readonly List<ActiveEffectType> EffectList = new List<ActiveEffectType>();
+
         /// <summary>
         /// Effects to a list of durations.
         /// </summary>
@@ -86,9 +86,9 @@ namespace Entity {
                             Armor.Current = 0;
                             HitPoints.Damage(damageToTake - blockedByArmor);
                         }
+
                         break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
+                    default: throw new ArgumentOutOfRangeException();
                 }
 
                 for(var j = 0; j < stacks.Count;) {
