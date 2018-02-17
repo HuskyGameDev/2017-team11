@@ -1,10 +1,12 @@
-﻿using Entity;
+﻿using System.Runtime.CompilerServices;
+using Entity;
 
 namespace AI {
     public struct Move {
         public readonly GameEntity Actor, Target;
         public readonly Attack[] Attacks;
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Perform() {
             for(var i = 0; i < Attacks.Length; i += 1) {
                 Target.MyEntity.ApplyAttack(Attacks[i]);

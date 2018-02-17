@@ -9,25 +9,17 @@ namespace Entity
     [Serializable]
     public struct Attribute
     {
-        private uint _current;
-
-        public uint Current
-        {
-            get { return _current; }
-            set
-            {
-                if (value > Maximum + Temporary)
-                {
-                    _current = (ushort) Math.Min(ushort.MaxValue, Maximum + Temporary);
-                }
-                else
-                {
-                    _current = value;
-                }
-            }
-        }
-
+        /// <summary>
+        /// The current value.
+        /// </summary>
+        public uint Current;
+        /// <summary>
+        /// The maximum value (less temporary).
+        /// </summary>
         public ushort Maximum;
+        /// <summary>
+        /// The temporary bonus (added to maximum in checking).
+        /// </summary>
         public ushort Temporary;
 
         public Attribute(ushort value) : this(value, value, 0) {}
@@ -36,23 +28,41 @@ namespace Entity
         {
             Maximum = maximum;
             Temporary = temporary;
-            _current = 0;
-            Current = current;
+            Current = 0;
+            CurrentProperty = current;
+        }
+        
+        /// <summary>
+        /// Wraps <see cref="Current"/> with setter to make sure we don't exceed the maximum + temporary limit.
+        /// </summary>
+        public uint CurrentProperty
+        {
+            get { return Current; }
+            set
+            {
+                if (value > Maximum + Temporary)
+                {
+                    Current = (ushort) Math.Min(value, Maximum + Temporary);
+                }
+                else
+                {
+                    Current = value;
+                }
+            }
         }
 
+        /// <summary>
+        /// Damages the current effect. This checks we don't go out of [0, Max + Temp].
+        /// </summary>
+        /// <param name="amount">The amount of damage to take, or heal (if negative).</param>
         public void Damage(int amount)
         {
             if (amount > Current)
-            {
                 Current = 0;
-            } else if (amount < 0)
-            {
-                Current += (uint) -amount;
-            }
+            else if (amount < 0)
+                CurrentProperty = Current + (uint) -amount;
             else
-            {
-                Current -= (uint) amount;
-            }
+                Current = Current - (uint) amount;
         }
     }
 }
