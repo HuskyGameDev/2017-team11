@@ -1,16 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using AI;
+using Entity;
 using UnityEngine;
 
+[Serializable]
+[RequireComponent(typeof(PlayerAi))]
 public class PlayerController : MonoBehaviour {
+	public static PlayerController Instance;
+	//TODO: variables for save info
+	public GameEntity[] Cats;
+	//TODO: variables for inventory
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	void Awake() {
+		if(Instance == null) {
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
+		} else {
+			Destroy(gameObject);
+		}
 	}
 }
