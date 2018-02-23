@@ -51,11 +51,13 @@ namespace Entity
             }
         }
 
+        public uint Absent => (uint) (Maximum + Temporary) - Current;
+
         /// <summary>
         /// Damages the current effect. This checks we don't go out of [0, Max + Temp].
         /// </summary>
         /// <param name="amount">The amount of damage to take, or heal (if negative).</param>
-        public void Damage(int amount)
+        public void Damage(double amount)
         {
             if (amount > Current)
                 Current = 0;

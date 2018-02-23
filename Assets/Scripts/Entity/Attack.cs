@@ -3,12 +3,12 @@
     /// Container for attack data.
     /// </summary>
     public struct Attack {
-        public int PhysicalDamage;
-        public ActiveEffect[] ActiveEffects;
+        public int PhysicalStrength;
+        public Action[] Actions;
 
-        public Attack(int physicalDamage, params ActiveEffect[] activeEffects) {
-            PhysicalDamage = physicalDamage;
-            ActiveEffects = activeEffects;
+        public Attack(int physicalStrength, params Action[] actions) {
+            PhysicalStrength = physicalStrength;
+            Actions = actions;
         }
     }
 }

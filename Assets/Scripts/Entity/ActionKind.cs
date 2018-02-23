@@ -3,7 +3,7 @@
     /// <summary>
     /// Kinds of effects that exist.
     /// </summary>
-    internal enum ActiveEffectKind
+    internal enum ActionKind
     {
         /// <summary>
         /// A negative effect.

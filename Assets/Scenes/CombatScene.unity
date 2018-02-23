@@ -150,21 +150,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyEntity:
     IsPlayer: 0
-    HitPoints:
-      Current: 10
-      Maximum: 10
+    MentalResist:
+      Current: 0
+      Maximum: 1
       Temporary: 0
     Armor:
       Current: 0
       Maximum: 1
       Temporary: 0
-    PhysicalResist:
-      Current: 1
-      Maximum: 1
+    PoisonResist:
+      Current: 0
+      Maximum: 0
       Temporary: 0
-    MentalResist:
-      Current: 1
-      Maximum: 1
+    HitPoints:
+      Current: 10
+      Maximum: 10
       Temporary: 0
     EquippedInventory: []
 --- !u!1 &724477682
@@ -471,21 +471,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyEntity:
     IsPlayer: 1
-    HitPoints:
-      Current: 10
-      Maximum: 10
+    MentalResist:
+      Current: 0
+      Maximum: 1
       Temporary: 0
     Armor:
       Current: 0
-      Maximum: 0
+      Maximum: 1
       Temporary: 0
-    PhysicalResist:
+    PoisonResist:
       Current: 0
       Maximum: 0
       Temporary: 0
-    MentalResist:
-      Current: 0
-      Maximum: 0
+    HitPoints:
+      Current: 10
+      Maximum: 10
       Temporary: 0
     EquippedInventory: []
 --- !u!1 &2133361906

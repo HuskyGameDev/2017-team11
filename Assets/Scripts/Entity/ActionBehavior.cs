@@ -3,7 +3,7 @@
     /// <summary>
     /// Behaviors of effects.
     /// </summary>
-    internal enum ActiveEffectBehavior
+    internal enum ActionBehavior
     {
         /// <summary>
         /// Additional applications will reset the duration to the maximum of the remaining durations.

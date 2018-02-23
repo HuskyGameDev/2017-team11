@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Inventory;
 using UnityEngine;
+using UnityEngine.VR.WSA;
 
 namespace Entity {
     /// <summary>
@@ -10,25 +11,26 @@ namespace Entity {
     /// </summary>
     [Serializable] public class Entity {
         public bool IsPlayer;
-        public Attribute HitPoints = new Attribute(1);
-        public Attribute Armor = new Attribute(0);
-        public Attribute PhysicalResist = new Attribute(0);
+
         public Attribute MentalResist = new Attribute(0);
+        public Attribute Armor = new Attribute(0);
+        public Attribute PoisonResist = new Attribute(0);
+        public Attribute HitPoints = new Attribute(1);
 
         /// <summary>
         /// Effects that are active on this entity.
         /// </summary>
-        public readonly List<ActiveEffectType> EffectList = new List<ActiveEffectType>();
+        public readonly List<ActionType> EffectList = new List<ActionType>();
 
         /// <summary>
         /// Effects to a list of durations.
         /// </summary>
-        public readonly Dictionary<ActiveEffectType, List<int>> Effects = new Dictionary<ActiveEffectType, List<int>>();
+        public readonly Dictionary<ActionType, List<int>> Effects = new Dictionary<ActionType, List<int>>();
 
         /// <summary>
         /// All the effects the entity is immune to.
         /// </summary>
-        public readonly HashSet<ActiveEffectType> Immunities = new HashSet<ActiveEffectType>();
+        public readonly HashSet<ActionType> Immunities = new HashSet<ActionType>();
 
         /// <summary>
         /// Equipped items: probably just onesies TODO
@@ -43,84 +45,63 @@ namespace Entity {
         /// Checks if the entity is immune to a type of effect.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool IsImmuneTo(ActiveEffectType type) {return Immunities.Contains(type);}
+        public bool IsImmuneTo(ActionType type) {return Immunities.Contains(type);}
 
         /// <summary>
         /// Checks if the entity has an effect on them currently.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool HasEffect(ActiveEffectType type) {return Effects.ContainsKey(type);}
+        public bool HasEffect(ActionType type) {return Effects.ContainsKey(type);}
 
         /// <summary>
         /// Applies physical damage and inserts/updates effects into the list/dictionary.
         /// </summary>
         /// <param name="attack">An attack</param>
         public void ApplyAttack(Attack attack) {
-            for(var i = 0; i < attack.ActiveEffects.Length; i++) {
-                Debug.Log($"Active Effect: {i}");
-                var effect = attack.ActiveEffects[i];
-                if(IsImmuneTo(effect.Type))
+            for(var i = 0; i < attack.Actions.Length; i++) {
+                var type = attack.Actions[i].Type;
+                var duration = attack.Actions[i].Duration;
+                if(Immunities.Contains(type))
                     continue;
-                var description = Registry.ActiveEffectKinds[effect.Type];
-                if(!HasEffect(effect.Type)) {
-                    EffectList.Add(effect.Type);
-                    Effects[effect.Type] = new List<int>(effect.Duration);
-                } else
+                var description = Registry.ActionDescriptors[type];
+                if(!HasEffect(type)) {
+                    EffectList.Add(type);
+                    Effects[type] = new List<int>{ duration };
+                } else {
                     switch(description.Behavior) {
-                        case ActiveEffectBehavior.Capping:
-                            Effects[effect.Type][0] = Math.Max(Effects[effect.Type][0], effect.Duration);
+                        case ActionBehavior.Capping:
+                            Effects[type][0] = Math.Max(Effects[type][0], duration);
                             break;
-                        case ActiveEffectBehavior.Duration:
-                            Effects[effect.Type][0] += effect.Duration;
+                        case ActionBehavior.Duration:
+                            Effects[type][0] += duration;
                             break;
-                        case ActiveEffectBehavior.Intensity:
-                            Effects[effect.Type].Add(effect.Duration);
+                        case ActionBehavior.Intensity:
+                            Effects[type].Add(duration);
                             break;
                     }
+                }
             }
 
-            // if no physical damage, we're done here.
-            if(attack.PhysicalDamage <= 0)
-                return;
-            var blockedByArmor = (int) Armor.Current * 2;
-            if(attack.PhysicalDamage < blockedByArmor) {
-                // no health damage, just damage the armor.
-                Armor.Damage(attack.PhysicalDamage / 2);
-                return;
-            }
-
-            // armor gone, damage health the rest.
-            Armor.CurrentProperty = 0;
-            HitPoints.Damage(attack.PhysicalDamage - blockedByArmor);
+            // if physical damage, apply it.
+            if(attack.PhysicalStrength > 0)
+                Damage(attack.PhysicalStrength, Registry.PhysicalDamageArmorReductionScaling, 0.0f, 0.0f, 0.0f);
         }
 
         /// <summary>
-        /// Applies the damage from all effects and ticks down the stacks.
+        /// Applies the damage from all persisting effects and ticks down the stacks.
         /// </summary>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public void ProcessEffects() {
             for(var i = 0; i < EffectList.Count;) {
                 var type = EffectList[i];
                 var stacks = Effects[type];
-                switch(type) {
-                    case ActiveEffectType.Bleeding:
-                        HitPoints.Damage(6);
-                        break;
-                    case ActiveEffectType.Burning:
-                        var damageToTake = 10 * stacks.Count;
-                        if(damageToTake == 0)
-                            break;
-                        var blockedByArmor = (int) Armor.Current * 5;
-                        if(damageToTake < blockedByArmor) {
-                            Armor.Damage(damageToTake / 5);
-                        } else {
-                            Armor.CurrentProperty = 0;
-                            HitPoints.Damage(damageToTake - blockedByArmor);
-                        }
-
-                        break;
-                    default: throw new ArgumentOutOfRangeException();
-                }
+                var descriptor = Registry.ActionDescriptors[type];
+                Debug.Log($"Taking {type} of damage {descriptor.BaseDamage} of stacks {stacks.Count}");
+                Damage(descriptor.BaseDamage * stacks.Count,
+                       descriptor.ArmorReductionScaling,
+                       descriptor.PoisonResistScaling,
+                       descriptor.MentalResistScaling,
+                       descriptor.HealingFactor);
 
                 for(var j = 0; j < stacks.Count;) {
                     stacks[j] -= 1;
@@ -139,6 +120,71 @@ namespace Entity {
                     // If we didn't remove, go to the next one.
                     i += 1;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Damages an entity. Order of damage is: Mental, Armor, Poison, Health.
+        /// </summary>
+        /// <param name="damage">Base damage to take, if there are no resistances, directly against health.</param>
+        /// <param name="armorScaling">By what factor armor affects damage.</param>
+        /// <param name="poisonScaling">By what factor poison resist affects damage.</param>
+        /// <param name="mentalScaling">By what factor mental resist affects damage.</param>
+        /// <param name="healingFactor">If damage is negative, by what factor does healing scale off that damage?</param>
+        private void Damage(int damage, float armorScaling, float poisonScaling, float mentalScaling, float healingFactor) {
+            if(damage < 0) {
+                if(mentalScaling > 0 && MentalResist.Absent > 0)
+                    MentalResist.Damage(damage * mentalScaling);
+
+                if(armorScaling > 0 && Armor.Absent > 0)
+                    Armor.Damage(damage * armorScaling);
+
+                if(poisonScaling > 0 && PoisonResist.Absent > 0)
+                    PoisonResist.Damage(damage * poisonScaling);
+
+                if(healingFactor > 0 && HitPoints.Absent > 0)
+                    HitPoints.Damage(damage * healingFactor);
+            } else {
+                if(MentalResist.Current > 0 && mentalScaling > 0) {
+                    // The half comes from https://stackoverflow.com/questions/904910/how-do-i-round-a-float-up-to-the-nearest-int-in-c#comment38709089_904925
+                    var resisted = (int) (damage / mentalScaling + 0.5f);
+                    Debug.Log($"Resisted {resisted} Mental Damage");
+                    if(resisted < MentalResist.Current) {
+                        MentalResist.Damage(resisted);
+                        return;
+                    }
+
+                    MentalResist.Current = 0;
+                    damage -= resisted;
+                }
+
+                if(Armor.Current > 0 && armorScaling > 0) {
+                    var resisted = (int) (damage / armorScaling + 0.5f);
+                    Debug.Log($"Resisted {resisted} Armor Damage");
+                    if(resisted < Armor.Current) {
+                        Armor.Damage(resisted);
+                        return;
+                    }
+
+                    Armor.Current = 0;
+                    damage -= resisted;
+                }
+
+                if(PoisonResist.Current > 0 && poisonScaling > 0) {
+                    var resisted = (int) (damage / poisonScaling + 0.5f);
+                    Debug.Log($"Resisted {resisted} Poison Damage");
+                    if(resisted < PoisonResist.Current) {
+                        PoisonResist.Damage(resisted);
+                        return;
+                    }
+
+                    PoisonResist.Current = 0;
+                    damage -= resisted;
+                }
+
+                Debug.Log($"Taking {damage} damage.");
+                if(damage > 0)
+                    HitPoints.Damage(damage);
             }
         }
     }
