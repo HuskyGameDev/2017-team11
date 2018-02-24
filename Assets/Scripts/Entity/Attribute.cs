@@ -68,7 +68,7 @@ namespace Entity
             if(amount > Current)
                 Current = 0;
             else {
-                var take = (int) amount;
+                var take = (int) (amount + 0.5f);
                 delta = amount - take;
                 CurrentProperty -= take;
             }
