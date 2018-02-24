@@ -151,9 +151,9 @@ namespace Entity {
             var descriptor = Registry.ActionDescriptors[type];
             if(damage < 0) {
                 if(Onesie.EffectModifiers.ContainsKey(type))
-                    damage *= Onesie.EffectModifiers[type];
+                    damage /= Onesie.EffectModifiers[type];
                 if(EffectModifiers.ContainsKey(type))
-                    damage *= EffectModifiers[type];
+                    damage /= EffectModifiers[type];
                 if(descriptor.MentalResistScaling > 0 && MentalResist.Absent > 0)
                     MentalResist.Damage(damage * descriptor.MentalResistScaling);
 
@@ -167,9 +167,9 @@ namespace Entity {
                     HitPoints.Damage(damage * descriptor.HealingFactor);
             } else {
                 if(Onesie.EffectModifiers.ContainsKey(type))
-                    damage /= Onesie.EffectModifiers[type];
+                    damage *= Onesie.EffectModifiers[type];
                 if(EffectModifiers.ContainsKey(type))
-                    damage /= EffectModifiers[type];
+                    damage *= EffectModifiers[type];
                 
                 if(MentalResist.Current > 0 && descriptor.MentalResistScaling > 0) {
                     // The half comes from https://stackoverflow.com/questions/904910/how-do-i-round-a-float-up-to-the-nearest-int-in-c#comment38709089_904925
