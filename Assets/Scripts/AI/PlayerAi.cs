@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Entity;
+using Action;
 using UnityEngine;
 
 namespace AI
@@ -39,7 +39,7 @@ namespace AI
                 if (GUILayout.Button("DoPlayerAttack"))
                 {
                     _moves.Add(new Move(PlayerController.Instance.Cats[0], RoundController.Instance.EnemyEntities[0],
-                        new Attack(0, new Action(ActionType.Bleeding, 1))));
+                        new Attack(0, new Action.Action(ActionType.Bleeding, 1))));
                     _turnOver = true;
                 }
             }

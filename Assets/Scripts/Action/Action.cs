@@ -1,4 +1,4 @@
-﻿namespace Entity {
+﻿namespace Action {
     /// <summary>
     /// Container for an effect type and duration.
     /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace Entity
+﻿namespace Action
 {
     /// <summary>
     /// Behaviors of effects.

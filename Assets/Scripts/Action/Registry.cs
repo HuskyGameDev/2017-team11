@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Entity
+namespace Action
 {
     /// <summary>
     /// Registries of various things.

@@ -1,4 +1,4 @@
-﻿namespace Entity
+﻿namespace Action
 {
     /// <summary>
     /// A description of what the effect is and how it behaves when applied more than once,

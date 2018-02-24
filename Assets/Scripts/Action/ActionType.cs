@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entity
+namespace Action
 {
     /// <summary>
     /// An active effect; this can be either a boon or a condition, or something else just for tracking.
