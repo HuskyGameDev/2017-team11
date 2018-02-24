@@ -10,17 +10,15 @@
     {
         public readonly ActionKind Kind;
         public readonly ActionBehavior Behavior;
-        public readonly int BaseDamage;
         public readonly float ArmorReductionScaling;
         public readonly float PoisonResistScaling;
         public readonly float MentalResistScaling;
         public readonly float HealingFactor;
 
-        public ActionDescription(ActionKind kind, ActionBehavior behavior, int baseDamage, float armorScaling, float poisonResistScaling, float mentalResistScaling, float healingFactor)
+        public ActionDescription(ActionKind kind, ActionBehavior behavior, float armorScaling, float poisonResistScaling, float mentalResistScaling, float healingFactor)
         {
             Kind = kind;
             Behavior = behavior;
-            BaseDamage = baseDamage;
             ArmorReductionScaling = armorScaling;
             PoisonResistScaling = poisonResistScaling;
             MentalResistScaling = mentalResistScaling;

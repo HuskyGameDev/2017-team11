@@ -12,33 +12,39 @@ namespace Entity
         /// <summary>
         /// The current value.
         /// </summary>
-        public uint Current;
+        public int Current;
         /// <summary>
         /// The maximum value (less temporary).
         /// </summary>
-        public ushort Maximum;
+        public int Maximum;
         /// <summary>
         /// The temporary bonus (added to maximum in checking).
         /// </summary>
-        public ushort Temporary;
+        public int Temporary;
 
-        public Attribute(ushort value) : this(value, value, 0) {}
-        public Attribute(ushort current, ushort maximum) : this(current, maximum, 0) {}
-        public Attribute(ushort current, ushort maximum, ushort temporary)
+        /// <summary>
+        /// Partial damage float (clamped to 1/16)
+        /// </summary>
+        private float delta;
+
+        public Attribute(int value) : this(value, value, 0) {}
+        public Attribute(int current, int maximum) : this(current, maximum, 0) {}
+        public Attribute(int current, int maximum, int temporary)
         {
             Maximum = maximum;
             Temporary = temporary;
             Current = 0;
+            delta = 0.0f;
             CurrentProperty = current;
         }
         
         /// <summary>
         /// Wraps <see cref="Current"/> with setter to make sure we don't exceed the maximum + temporary limit.
         /// </summary>
-        public uint CurrentProperty
+        public int CurrentProperty
         {
             get { return Current; }
-            set
+            private set
             {
                 if (value > Maximum + Temporary)
                 {
@@ -51,20 +57,21 @@ namespace Entity
             }
         }
 
-        public uint Absent => (uint) (Maximum + Temporary) - Current;
+        public int Absent => Maximum + Temporary - Current;
 
         /// <summary>
         /// Damages the current effect. This checks we don't go out of [0, Max + Temp].
         /// </summary>
         /// <param name="amount">The amount of damage to take, or heal (if negative).</param>
-        public void Damage(double amount)
-        {
-            if (amount > Current)
+        public void Damage(float amount) {
+            amount += delta;
+            if(amount > Current)
                 Current = 0;
-            else if (amount < 0)
-                CurrentProperty = Current + (uint) -amount;
-            else
-                Current = Current - (uint) amount;
+            else {
+                var take = (int) amount;
+                delta = amount - take;
+                CurrentProperty -= take;
+            }
         }
     }
 }

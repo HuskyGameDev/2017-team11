@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using AI;
 using Entity;
+using Inventory;
 using UnityEngine;
 
 /// <summary>
@@ -24,7 +25,7 @@ public class RoundController : MonoBehaviour
 	private void Start() {
 		PlayerAiController = PlayerController.Instance.GetComponent<PlayerAi>();
 		EnemyAiController = GetComponent<EnemyAi>();
-		//PlayerController.Instance.PassiveLoopEnabled = false;
+		EnemyEntities[0].EquipOnesie(new Onesie("Box"));
 	}
 
 	private void Update() {

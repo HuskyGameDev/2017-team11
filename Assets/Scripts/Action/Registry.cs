@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Inventory;
 
 namespace Action
 {
@@ -14,14 +15,21 @@ namespace Action
         public static readonly Dictionary<ActionType, ActionDescription> ActionDescriptors =
             new Dictionary<ActionType, ActionDescription>
             {
-                {ActionType.Bleeding,new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 6, 0.0f, 0.0f, 0.0f, 0.0f)},
-                {ActionType.Burning, new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 10, 5.0f, 0.0f, 0.0f, 0.0f)}
+                {ActionType.Physical,new ActionDescription(ActionKind.Condition, ActionBehavior.Intensity, 2.0f, 0.0f, 0.0f, 0.0f)},
+                {ActionType.Bleeding,new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 0.0f, 0.0f, 0.0f, 0.0f)},
+                {ActionType.Burning, new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 5.0f, 0.0f, 0.0f, 0.0f)}
+            };
+        
+        /// <summary>
+        /// Base damage for <see cref="ActionType"/>s.
+        /// </summary>
+        public static readonly Dictionary<ActionType, int> ActionStrength =
+            new Dictionary<ActionType, int> {
+                {ActionType.Physical, 0},
+                {ActionType.Bleeding, 6},
+                {ActionType.Burning, 10}
             };
 
-        /// <summary>
-        /// Since physical damage varies per attack, unlikely condition damage, we can't use its descriptor.
-        /// This constant is used in damage calculation, with poison and mental resist scaling set to 0.
-        /// </summary>
-        public const float PhysicalDamageArmorReductionScaling = 2.0f;
+        public const string DefaultOnesieName = "Cat";
     }
 }

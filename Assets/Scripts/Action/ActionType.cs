@@ -10,6 +10,7 @@ namespace Action
     [Serializable]
     public enum ActionType
     {
+        Physical,
         Burning,
         Bleeding
     }
