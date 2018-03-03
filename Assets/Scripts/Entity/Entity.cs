@@ -5,6 +5,7 @@ using Action;
 using Inventory;
 using UnityEngine;
 using UnityEngine.VR.WSA;
+using Random = UnityEngine.Random;
 
 namespace Entity {
     /// <summary>
@@ -17,6 +18,10 @@ namespace Entity {
         public Attribute Armor = new Attribute(0);
         public Attribute PoisonResist = new Attribute(0);
         public Attribute HitPoints = new Attribute(1);
+        // Crit chance is / 100.0f when applied
+        public Attribute CritChance = new Attribute(10);
+        // Crit damage is / 100.0f when applied
+        public Attribute CritDamage = new Attribute(50);
 
         public Entity() {
             Onesie.SetSpriteName(EntityId);
@@ -142,6 +147,24 @@ namespace Entity {
             }
         }
 
+        /// <summary>Returns true if hit was critical. We can do deciding for stuff on here.</summary>
+        /// <returns>True if the hit was critical (random &lt;= crit chance)</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private bool CriticalHit()
+        {
+            var it = Random.value <= CritChance.Current / 100.0f;
+            if (it)
+            {
+                Debug.Log("Critical hit!");
+            }
+            else
+            {
+                Debug.Log("Normal hit!");
+            }
+
+            return it;
+        }
+
         /// <summary>
         /// Damages an entity. Order of damage is: Mental, Armor, Poison, Health.
         /// </summary>
@@ -149,6 +172,10 @@ namespace Entity {
         /// <param name="damage">Base damage to take, if there are no resistances, directly against health. <see cref="Registry"/></param>
         private void Damage(ActionType type, float damage) {
             var descriptor = Registry.ActionDescriptors[type];
+            if (type == ActionType.Physical && CriticalHit())
+            {
+                damage *= 1 + CritDamage.Current / 100.0f;
+            }
             if(damage < 0) {
                 if(Onesie.EffectModifiers.ContainsKey(type))
                     damage /= Onesie.EffectModifiers[type];
