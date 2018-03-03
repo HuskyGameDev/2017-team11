@@ -8,6 +8,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Cataclysm_Sound_Bank" ID="{B37EB6AA-2728-4604-853B-9A1B7B7445FD}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Cat_Purrs" ID="{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
