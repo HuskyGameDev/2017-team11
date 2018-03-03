@@ -3,39 +3,42 @@
 	<Platform GUID="{FE985549-61FE-4110-8188-F4C2ED14200F}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2547431224" Timestamp="131632837017272125"/>
+				<File Name="Cataclysm_Sound_Bank" Hash="3732700522" Timestamp="131645799212273241"/>
+				<File Name="Init" Hash="2547431224" Timestamp="131645799212438351"/>
 				<File Name="PrimarySoundBank" Hash="1739925060" Timestamp="131632837017115851"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="559051905" Timestamp="131632837017468306"/>
+				<File Name="" Hash="4028870503" Timestamp="131645799212493387"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{4FD16D90-3B16-44D5-AECB-7A5D81B49D2E}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2403855257" Timestamp="131632837019079422"/>
+				<File Name="Cataclysm_Sound_Bank" Hash="3732700522" Timestamp="131645799215229710"/>
+				<File Name="Init" Hash="2403855257" Timestamp="131645799215359942"/>
 				<File Name="PrimarySoundBank" Hash="1739925060" Timestamp="131632837018914311"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1713366396" Timestamp="131632837019139467"/>
+				<File Name="" Hash="4247437392" Timestamp="131645799215409990"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{7BC9C2CD-21DB-4BC7-8DC8-F9525DB3B2A2}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="580030591" Timestamp="131632837018233836"/>
+				<File Name="Cataclysm_Sound_Bank" Hash="3732700522" Timestamp="131645799213818791"/>
+				<File Name="Init" Hash="580030591" Timestamp="131645799213933869"/>
 				<File Name="PrimarySoundBank" Hash="1739925060" Timestamp="131632837018138774"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1926381690" Timestamp="131632837018278871"/>
+				<File Name="" Hash="974957722" Timestamp="131645799213983902"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
