@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using AI;
 using Entity;
 using Inventory;
@@ -12,74 +11,76 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyAi))]
 public class RoundController : MonoBehaviour
 {
-	public static RoundController Instance;
-	
-	public bool IsPlayerTurn = true;
-	public bool IsNewTurn = true;
-	public GameEntity[] EnemyEntities;
-	public IActionController PlayerAiController, EnemyAiController;
+    public static RoundController Instance;
 
-	private void Awake() { Instance = this; }
-	private void OnDestroy(){ Instance = null; }
+    public bool IsPlayerTurn = true;
+    public bool IsNewTurn = true;
+    public GameEntity[] EnemyEntities;
+    public IEntityTurnController PlayerAiController, EnemyAiController;
 
-	private void Start() {
-		PlayerAiController = PlayerController.Instance.GetComponent<PlayerAi>();
-		EnemyAiController = GetComponent<EnemyAi>();
-		EnemyEntities[0].EquipOnesie(new Onesie("Box"));
-	}
+    private void Awake() => Instance = this;
+    private void OnDestroy() => Instance = null;
 
-	private void Update() {
-		if(IsNewTurn)
-			// run the start-of-turn stuff.
-			BeginTurn();
-		if(IsPlayerTurn && PlayerAiController.IsTurnOver() || !IsPlayerTurn && EnemyAiController.IsTurnOver())
-			AdvanceTurn();
-	}
+    private void Start()
+    {
+        PlayerAiController = PlayerController.Instance.GetComponent<PlayerAi>();
+        EnemyAiController = GetComponent<EnemyAi>();
+        EnemyEntities[0].EquipOnesie(new Onesie("Box"));
+    }
 
-	/// <summary>
-	/// Runs start-of-turn things and lets the relevant IActionController know it can  
-	/// </summary>
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	private void BeginTurn() {
-		if(IsPlayerTurn) {
-			for(var i = 0; i < PlayerController.Instance.Cats.Length; i += 1) {
-				// tick effects on each cat.
-				PlayerController.Instance.Cats[i].MyEntity.ProcessEffects();
-			}
-			PlayerAiController.BeginTurn();
-		} else {
-			for(var i = 0; i < EnemyEntities.Length; i += 1) {
-				// tick effects on each monster.
-				EnemyEntities[i].MyEntity.ProcessEffects();
-			}
-			EnemyAiController.BeginTurn();	
-		}
-		IsNewTurn = false;
-	}
+    private void Update()
+    {
+        if (IsPlayerTurn)
+        {
+            if (IsNewTurn)
+            {
+                for (var i = 0; i < PlayerController.Instance.Cats.Length; i++)
+                    // tick effects on each cat.
+                    PlayerController.Instance.Cats[i].MyEntity.ProcessEffects();
+                PlayerAiController.BeginTurn();
 
-	/// <summary>
-	/// Runs end-of-turn actions and applies all moves.
-	/// </summary>
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	private void AdvanceTurn() {
-		if(IsPlayerTurn) {
-			var moveList = PlayerAiController.GetMoves();
-			for(var i = 0; i < moveList.Count; i++) {
-				// perform the player moves.
-				moveList[i].Perform();
-			}
-			PlayerAiController.DoneWithMoveList();
-		} else {
-			var moveList = EnemyAiController.GetMoves();
-			for(var i = 0; i < moveList.Count; i++) {
-				// perform the AI moves.
-				moveList[i].Perform();
-			}
-			EnemyAiController.DoneWithMoveList();
-		}
-		
-		// start the next turn on the opposite side.
-		IsPlayerTurn = !IsPlayerTurn;
-		IsNewTurn = true;
-	}
+                IsNewTurn = false;
+            }
+
+            if (PlayerAiController.IsMoveAvailable())
+            {
+                // perform available moves.
+                var moveList = PlayerAiController.GetMoves();
+                for (var i = 0; i < moveList.Count; i++)
+                    moveList[i].Perform();
+                PlayerAiController.DoneWithMoves();
+            }
+
+            if (!PlayerAiController.IsTurnOver())
+                return;
+        }
+        else // monster turn
+        {
+            if (IsNewTurn)
+            {
+                for (var i = 0; i < EnemyEntities.Length; i++)
+                    // tick effects on each monster.
+                    EnemyEntities[i].MyEntity.ProcessEffects();
+                PlayerAiController.BeginTurn();
+
+                IsNewTurn = false;
+            }
+
+            if (EnemyAiController.IsMoveAvailable())
+            {
+                // perform available moves.
+                var moveList = EnemyAiController.GetMoves();
+                for (var i = 0; i < moveList.Count; i++)
+                    moveList[i].Perform();
+                EnemyAiController.DoneWithMoves();
+            }
+
+            if (!EnemyAiController.IsTurnOver())
+                return;
+        }
+
+        // no turn not over, so advance the turn
+        IsPlayerTurn = !IsPlayerTurn;
+        IsNewTurn = true;
+    }
 }

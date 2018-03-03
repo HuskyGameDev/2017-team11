@@ -7,30 +7,22 @@ namespace AI
     /// <summary>
     /// Player controls; UI updates this, and turn ends when button is clicked?
     /// </summary>
-    public class PlayerAi : MonoBehaviour, IActionController
+    public class PlayerAi : MonoBehaviour, IEntityTurnController
     {
         private bool _turnOver = true;
         private readonly List<Move> _moves = new List<Move>();
 
-        public void BeginTurn()
+        public void BeginTurn() => _turnOver = false;
+
+        public void EndTurn()
         {
-            _turnOver = false;
+            //TODO: disable action-taking
         }
 
-        public bool IsTurnOver()
-        {
-            return _turnOver;
-        }
-
-        public List<Move> GetMoves()
-        {
-            return _moves;
-        }
-
-        public void DoneWithMoveList()
-        {
-            _moves.Clear();
-        }
+        public bool IsTurnOver() => _turnOver;
+        public bool IsMoveAvailable() => _moves.Count > 0;
+        public List<Move> GetMoves() => _moves;
+        public void DoneWithMoves() => _moves.Clear();
 
         private void OnGUI()
         {
