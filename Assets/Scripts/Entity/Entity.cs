@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using Action;
 using Inventory;
 using UnityEngine;
-using UnityEngine.VR.WSA;
 using Random = UnityEngine.Random;
 
 namespace Entity {
@@ -49,6 +48,10 @@ namespace Entity {
             Armor.Temporary = Armor.Temporary - oldOnesie.ArmorMod + Onesie.ArmorMod;
             PoisonResist.Temporary = PoisonResist.Temporary - oldOnesie.PoisonResistMod + Onesie.PoisonResistMod;
             HitPoints.Temporary = HitPoints.Temporary - oldOnesie.HitPointsMod + Onesie.HitPointsMod;
+            CritChance.Temporary = CritChance.Temporary - oldOnesie.CritChance + Onesie.CritChance;
+            CritDamage.Temporary = CritDamage.Temporary - oldOnesie.CritChance + Onesie.CritDamage;
+            CritChance.Current = CritChance.Temporary + CritChance.Maximum;
+            CritDamage.Current = CritChance.Temporary + CritChance.Maximum;
             
             return oldOnesie;
         }

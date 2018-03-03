@@ -13,6 +13,8 @@ namespace Inventory {
         public int ArmorMod;
         public int PoisonResistMod;
         public int MentalResistMod;
+        public int CritChance;
+        public int CritDamage;
 
         /// <summary>
         /// All the effects the onsie makes the entitiy immune to.
