@@ -13,12 +13,6 @@ namespace AI
         private readonly List<Move> _moves = new List<Move>();
 
         public void BeginTurn() => _turnOver = false;
-
-        public void EndTurn()
-        {
-            //TODO: disable action-taking
-        }
-
         public bool IsTurnOver() => _turnOver;
         public bool IsMoveAvailable() => _moves.Count > 0;
         public List<Move> GetMoves() => _moves;
@@ -26,15 +20,12 @@ namespace AI
 
         private void OnGUI()
         {
-            if (!_turnOver)
-            {
-                if (GUILayout.Button("DoPlayerAttack"))
-                {
-                    _moves.Add(new Move(PlayerController.Instance.Cats[0], RoundController.Instance.EnemyEntities[0],
-                        new Attack(0, new Action.Action(ActionType.Bleeding, 1))));
-                    _turnOver = true;
-                }
-            }
+            if (_turnOver)
+                return;
+            if (!GUILayout.Button("DoPlayerAttack"))
+                return;
+            _moves.Add(new Move(PlayerController.Instance.Cats[0], RoundController.Instance.EnemyEntities[0], new Attack(2)));
+            _turnOver = true;
         }
     }
 }

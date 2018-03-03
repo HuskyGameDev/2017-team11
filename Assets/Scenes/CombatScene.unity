@@ -156,7 +156,7 @@ MonoBehaviour:
       Maximum: 1
       Temporary: 0
     Armor:
-      Current: 0
+      Current: 1
       Maximum: 1
       Temporary: 0
     PoisonResist:
@@ -526,7 +526,7 @@ MonoBehaviour:
       Maximum: 1
       Temporary: 0
     Armor:
-      Current: 0
+      Current: 1
       Maximum: 1
       Temporary: 0
     PoisonResist:

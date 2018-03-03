@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using AI;
 using Entity;
 using Inventory;
 using UnityEngine;
 
+/// <inheritdoc />
 /// <summary>
 /// Handles turn-based combat.
 /// </summary>
@@ -51,8 +53,11 @@ public class RoundController : MonoBehaviour
                 PlayerAiController.DoneWithMoves();
             }
 
-            if (!PlayerAiController.IsTurnOver())
-                return;
+            if (PlayerAiController.IsTurnOver())
+            {
+                IsPlayerTurn = false;
+                IsNewTurn = true;
+            }
         }
         else // monster turn
         {
@@ -61,7 +66,7 @@ public class RoundController : MonoBehaviour
                 for (var i = 0; i < EnemyEntities.Length; i++)
                     // tick effects on each monster.
                     EnemyEntities[i].MyEntity.ProcessEffects();
-                PlayerAiController.BeginTurn();
+                EnemyAiController.BeginTurn();
 
                 IsNewTurn = false;
             }
@@ -75,12 +80,11 @@ public class RoundController : MonoBehaviour
                 EnemyAiController.DoneWithMoves();
             }
 
-            if (!EnemyAiController.IsTurnOver())
-                return;
+            if (EnemyAiController.IsTurnOver())
+            {
+                IsPlayerTurn = true;
+                IsNewTurn = true;
+            }
         }
-
-        // no turn not over, so advance the turn
-        IsPlayerTurn = !IsPlayerTurn;
-        IsNewTurn = true;
     }
 }
