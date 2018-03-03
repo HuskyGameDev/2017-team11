@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="80">
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="810168607" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="810178611" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="810188621" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Cataclysm_WwiseProject.wproj" DateLow="810218649" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="810218649" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="810228646" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="810228646" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="810238654" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Effects\Default Work Unit.wwu" DateLow="810248664" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Effects\Factory Effects.wwu" DateLow="810258668" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Events\Default Work Unit.wwu" DateLow="810258668" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="810268681" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="810378759" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="810388760" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="810398770" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="810398770" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Presets\Default Work Unit.wwu" DateLow="810408777" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Queries\Default Work Unit.wwu" DateLow="810408777" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Queries\Factory Queries.wwu" DateLow="810418787" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="810428794" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="810428794" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\States\Default Work Unit.wwu" DateLow="810438798" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Switches\Default Work Unit.wwu" DateLow="810438798" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="810448805" DateHigh="30651163"/>
+	<ValidationCacheItem File="C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="810458812" DateHigh="30651163"/>
+</ValidationCache>
