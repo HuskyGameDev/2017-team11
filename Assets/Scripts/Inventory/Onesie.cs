@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Action;
 using UnityEngine;
+using AI;
 
 namespace Inventory {
     [Serializable]
@@ -25,7 +26,14 @@ namespace Inventory {
         /// </summary>
         public readonly Dictionary<ActionType, float> EffectModifiers = new Dictionary<ActionType, float>();
 
-        public Onesie(string baseName) {_baseName = baseName;}
+		// Holds the set of attacks the onsie adds to the cat
+		public readonly List<Move> Moves = new List<Move> ();
+
+		public Onesie(string baseName, List<Move> _Moves)
+		{
+			_baseName = baseName;
+			Moves = _Moves;
+		}
 
         public void SetSpriteName(ushort entityId) {
             SpriteName = $"Onesie/{_baseName}{entityId:x4}";

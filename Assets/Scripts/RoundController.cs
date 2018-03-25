@@ -4,6 +4,7 @@ using AI;
 using Entity;
 using Inventory;
 using UnityEngine;
+using Action;
 
 /// <inheritdoc />
 /// <summary>
@@ -27,7 +28,7 @@ public class RoundController : MonoBehaviour
     {
         PlayerAiController = PlayerController.Instance.GetComponent<PlayerAi>();
         EnemyAiController = GetComponent<EnemyAi>();
-        EnemyEntities[0].EquipOnesie(new Onesie("Box"));
+		EnemyEntities[0].EquipOnesie(Registry.OnesieList[1]);
     }
 
     private void Update()
@@ -49,7 +50,7 @@ public class RoundController : MonoBehaviour
                 // perform available moves.
                 var moveList = PlayerAiController.GetMoves();
                 for (var i = 0; i < moveList.Count; i++)
-                    moveList[i].Perform();
+					moveList[i].Perform(EnemyEntities[0]);
                 PlayerAiController.DoneWithMoves();
             }
 
@@ -76,7 +77,7 @@ public class RoundController : MonoBehaviour
                 // perform available moves.
                 var moveList = EnemyAiController.GetMoves();
                 for (var i = 0; i < moveList.Count; i++)
-                    moveList[i].Perform();
+					moveList[i].Perform(PlayerController.Instance.Cats[0]);
                 EnemyAiController.DoneWithMoves();
             }
 

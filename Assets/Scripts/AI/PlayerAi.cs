@@ -24,7 +24,7 @@ namespace AI
                 return;
             if (!GUILayout.Button("DoPlayerAttack"))
                 return;
-            _moves.Add(new Move(PlayerController.Instance.Cats[0], RoundController.Instance.EnemyEntities[0], new Attack(2)));
+            _moves.Add(new Move(new Attack(2)));
             _turnOver = true;
         }
     }

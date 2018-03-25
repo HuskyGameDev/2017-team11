@@ -30,7 +30,7 @@ namespace Entity {
         /// <summary>
         /// The equipped onesie.
         /// </summary>
-        public Onesie Onesie = new Onesie(Registry.DefaultOnesieName);
+        public Onesie Onesie = Registry.OnesieList[0];
         
         /// <summary>
         /// Equipped items: probably just onesies TODO
@@ -39,7 +39,7 @@ namespace Entity {
 
         public Onesie EquipOnesie(Onesie onesie) {
             if(onesie == null)
-                onesie = new Onesie(Registry.DefaultOnesieName);
+				onesie = Registry.OnesieList[0];
             var oldOnesie = Onesie;
             Onesie = onesie;
             Onesie.SetSpriteName(EntityId);

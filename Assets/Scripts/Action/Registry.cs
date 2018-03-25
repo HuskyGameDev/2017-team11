@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Inventory;
+using AI;
 
 namespace Action
 {
@@ -31,5 +32,13 @@ namespace Action
             };
 
         public const string DefaultOnesieName = "Cat";
+
+
+		public static readonly Dictionary<int, Onesie> OnesieList =
+			new Dictionary<int, Onesie>
+		{
+			{0, new Onesie("cat", new List<Move> {new Move(new Attack(2))})},
+			{1, new Onesie("box", new List<Move> {new Move(new Attack(2))})}
+		};
     }
 }
