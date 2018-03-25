@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Inventory;
 
 namespace Action
 {
     /// <summary>
     /// Registries of various things.
     /// </summary>
-    internal static class Registry
+    internal static class GameRegistry
     {
         /// <summary>
         /// Ties <see cref="ActionType"/>s to <see cref="ActionKind"/>s and <see cref="ActionBehavior"/>s.

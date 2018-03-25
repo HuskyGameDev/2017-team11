@@ -6,7 +6,7 @@
     /// that resistance is bypassed.
     /// <seealso cref="ActionType"/>
     /// </summary>
-    internal struct ActionDescription
+    internal class ActionDescription
     {
         public readonly ActionKind Kind;
         public readonly ActionBehavior Behavior;

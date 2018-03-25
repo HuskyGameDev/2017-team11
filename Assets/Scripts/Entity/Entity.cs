@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Messaging;
 using Action;
 using Inventory;
 using UnityEngine;
@@ -11,7 +12,7 @@ namespace Entity {
     /// A friendly or enemy entity w/ attributes, active effects, and inventory.
     /// </summary>
     [Serializable] public class Entity {
-        public ushort EntityId = 0;
+        public ushort EntityId;
 
         public Attribute MentalResist = new Attribute(0);
         public Attribute Armor = new Attribute(0);
@@ -22,7 +23,9 @@ namespace Entity {
         // Crit damage is / 100.0f when applied
         public Attribute CritDamage = new Attribute(50);
 
-        public Entity() {
+        public Entity(ushort entityId = 0)
+        {
+            EntityId = entityId;
             Onesie.SetSpriteName(EntityId);
         }
 
@@ -30,7 +33,7 @@ namespace Entity {
         /// <summary>
         /// The equipped onesie.
         /// </summary>
-        public Onesie Onesie = new Onesie(Registry.DefaultOnesieName);
+        public Onesie Onesie = new Onesie(GameRegistry.DefaultOnesieName);
         
         /// <summary>
         /// Equipped items: probably just onesies TODO
@@ -39,7 +42,7 @@ namespace Entity {
 
         public Onesie EquipOnesie(Onesie onesie) {
             if(onesie == null)
-                onesie = new Onesie(Registry.DefaultOnesieName);
+                onesie = new Onesie(GameRegistry.DefaultOnesieName);
             var oldOnesie = Onesie;
             Onesie = onesie;
             Onesie.SetSpriteName(EntityId);
@@ -96,7 +99,7 @@ namespace Entity {
                 var duration = attack.Actions[i].Duration;
                 if(Immunities.Contains(type))
                     continue;
-                var description = Registry.ActionDescriptors[type];
+                var description = GameRegistry.ActionDescriptors[type];
                 if(!HasEffect(type)) {
                     EffectList.Add(type);
                     Effects[type] = new List<int>{ duration };
@@ -128,7 +131,7 @@ namespace Entity {
             for(var i = 0; i < EffectList.Count;) {
                 var type = EffectList[i];
                 var stacks = Effects[type];
-                Damage(type, Registry.ActionStrength[type] * stacks.Count);
+                Damage(type, GameRegistry.ActionStrength[type] * stacks.Count);
 
                 for(var j = 0; j < stacks.Count;) {
                     stacks[j] -= 1;
@@ -172,9 +175,9 @@ namespace Entity {
         /// Damages an entity. Order of damage is: Mental, Armor, Poison, Health.
         /// </summary>
         /// <param name="type">Type of the attack. <see cref="ActionType"/></param>
-        /// <param name="damage">Base damage to take, if there are no resistances, directly against health. <see cref="Registry"/></param>
+        /// <param name="damage">Base damage to take, if there are no resistances, directly against health. <see cref="GameRegistry"/></param>
         private void Damage(ActionType type, float damage) {
-            var descriptor = Registry.ActionDescriptors[type];
+            var descriptor = GameRegistry.ActionDescriptors[type];
             if (type == ActionType.Physical && CriticalHit())
             {
                 damage *= 1 + CritDamage.Current / 100.0f;
@@ -240,5 +243,26 @@ namespace Entity {
             }
         }
         #endregion
+
+        public Entity Clone()
+        {
+            var @new = new Entity(EntityId);
+            @new.MentalResist = new Attribute(MentalResist.Current, MentalResist.Maximum, MentalResist.Temporary);
+            @new.Armor = new Attribute(Armor.Current, Armor.Maximum, Armor.Temporary);
+            @new.PoisonResist = new Attribute(PoisonResist.Current, PoisonResist.Maximum, PoisonResist.Temporary);
+            @new.HitPoints = new Attribute(HitPoints.Current, HitPoints.Maximum, HitPoints.Temporary);
+            @new.CritChance = new Attribute(CritChance.Current, CritChance.Maximum, CritChance.Temporary);
+            @new.CritDamage = new Attribute(CritChance.Current, CritChance.Maximum, CritChance.Temporary);
+            @new.Onesie = Onesie;
+            @new.EquippedInventory = new List<Item>(EquippedInventory);
+            @new.EffectList.AddRange(EffectList);
+            foreach(var key in EffectModifiers.Keys)
+                @new.EffectModifiers[key] = EffectModifiers[key];
+            foreach(var key in Effects.Keys)
+                @new.Effects[key] = new List<int>(Effects[key]);
+            foreach(var key in Immunities)
+                @new.Immunities.Add(key);
+            return @new;
+        }
     }
 }
