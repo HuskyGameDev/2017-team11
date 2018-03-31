@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
+	261597827	Cat_Fight_Meow			\Default Work Unit\Cat_Fight_Meow	
 	3636054434	Cat_Purrs			\Default Work Unit\Cat_Purrs	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	573551727	Purrs	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Purrs 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Purrs		4406520
+	640818936	Fight Meow	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Fight Meow_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fight Meow		172920
 
