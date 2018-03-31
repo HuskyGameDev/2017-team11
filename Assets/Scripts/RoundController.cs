@@ -28,6 +28,7 @@ public class RoundController : MonoBehaviour
         PlayerAiController = PlayerController.Instance.GetComponent<PlayerAi>();
         EnemyAiController = GetComponent<EnemyAi>();
         EnemyEntities[0].EquipOnesie(new Onesie("Box"));
+        AkSoundEngine.PostEvent("Battle_Music", gameObject);
     }
 
     private void Update()

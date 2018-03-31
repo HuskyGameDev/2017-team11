@@ -237,8 +237,12 @@ namespace Entity {
                     damage -= resisted;
                 }
 
-                if(damage > 0)
+                if (damage > 0)
+                {
                     HitPoints.Damage(damage);
+                    if(Onesie.OnHitSoundEventName != null)
+                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, PlayerController.Instance.Cats[0].gameObject);
+                }
             }
         }
         #endregion

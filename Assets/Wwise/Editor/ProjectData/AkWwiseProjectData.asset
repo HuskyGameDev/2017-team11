@@ -16,9 +16,49 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}'
-    m_lastTimePsrt1: 503845338
-    m_lastTimePart2: -1999273663
+    m_lastTimePsrt1: 1015605398
+    m_lastTimePart2: -1999268049
     List:
+    - Name: Battle_Music
+      Path: Default Work Unit\Battle_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Battle_Music
+        ObjectType: 3
+      ID: -462951265
+      Guid: 2715b681cdb52c429c458c433e539801
+      maxAttenuation: 0
+    - Name: Cat_Fight_Meow
+      Path: Default Work Unit\Cat_Fight_Meow
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Fight_Meow
+        ObjectType: 3
+      ID: 261597827
+      Guid: a96b23e8895a6b4795fbc4939b9fad94
+      maxAttenuation: 0
+    - Name: Cat_Growl
+      Path: Default Work Unit\Cat_Growl
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Growl
+        ObjectType: 3
+      ID: -1518252487
+      Guid: 58cee7aea7dfc542839b0dbe7f6a5ab3
+      maxAttenuation: 0
+    - Name: Cat_Pain_Meow
+      Path: Default Work Unit\Cat_Pain_Meow
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Pain_Meow
+        ObjectType: 3
+      ID: 775186441
+      Guid: 34794a3162ce82498b3ae26dc7c29f75
+      maxAttenuation: 0
     - Name: Cat_Purrs
       Path: Default Work Unit\Cat_Purrs
       PathAndIcons:
@@ -54,8 +94,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{93A491BE-F801-4898-B34B-D75CA871806E}'
-    m_lastTimePsrt1: 503900375
-    m_lastTimePart2: -1999273663
+    m_lastTimePsrt1: 1015630572
+    m_lastTimePart2: -1999268049
     List:
     - Name: Cataclysm_Sound_Bank
       Path: Default Work Unit\Cataclysm_Sound_Bank
@@ -91,6 +131,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Cataclysm_WwiseProject
+  - /Cataclysm_WwiseProject/Events
+  - /Cataclysm_WwiseProject/Events/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

@@ -16,6 +16,8 @@ namespace Inventory {
         public int CritChance;
         public int CritDamage;
 
+        public string OnHitSoundEventName = null;
+
         public Attack[] Attacks =
         {
             new Attack(1),

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="80">
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="902327879" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="901917595" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="901987648" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Cataclysm_WwiseProject.cllacour.wsettings" DateLow="2255639161" DateHigh="30648157"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Cataclysm_WwiseProject.wproj" DateLow="901727456" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1119523438" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="902437962" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="902487991" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="902077711" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Effects\Default Work Unit.wwu" DateLow="902097721" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Effects\Factory Effects.wwu" DateLow="902157760" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Events\Default Work Unit.wwu" DateLow="902197785" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="902968330" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="902277854" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="902227809" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="901837539" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="902357900" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Presets\Default Work Unit.wwu" DateLow="902397931" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Queries\Default Work Unit.wwu" DateLow="902838239" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Queries\Factory Queries.wwu" DateLow="902918295" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="902528022" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="902548039" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\States\Default Work Unit.wwu" DateLow="902678146" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Switches\Default Work Unit.wwu" DateLow="902808218" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="902047683" DateHigh="30648155"/>
-	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="902007662" DateHigh="30648155"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="437321227" DateHigh="30656792"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="2284594469" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="2284594469" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Cataclysm_WwiseProject.cllacour.wsettings" DateLow="501869699" DateHigh="30656792"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Cataclysm_WwiseProject.wproj" DateLow="3459636377" DateHigh="30656787"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Effects\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Effects\Factory Effects.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Events\Default Work Unit.wwu" DateLow="437381270" DateHigh="30656792"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Presets\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Queries\Default Work Unit.wwu" DateLow="2284750722" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Queries\Factory Queries.wwu" DateLow="2284906962" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="437406444" DateHigh="30656792"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2284906962" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\States\Default Work Unit.wwu" DateLow="2284906962" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Switches\Default Work Unit.wwu" DateLow="2284906962" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="2284906962" DateHigh="30648178"/>
+	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm\Cataclysm_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="2284906962" DateHigh="30648178"/>
 	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm_WwiseIntegrationTemp\Cataclysm_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="454696068" DateHigh="30648155"/>
 	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm_WwiseIntegrationTemp\Cataclysm_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="455466361" DateHigh="30648155"/>
 	<ValidationCacheItem File="C:\Users\cllacour\Documents\Cataclysm_WwiseIntegrationTemp\Cataclysm_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="455816565" DateHigh="30648155"/>
