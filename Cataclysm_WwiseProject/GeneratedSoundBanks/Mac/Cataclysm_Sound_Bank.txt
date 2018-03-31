@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3636054434	Cat_Purrs			\Default Work Unit\Cat_Purrs	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	573551727	Purrs	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Purrs 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Purrs		4406520
+
