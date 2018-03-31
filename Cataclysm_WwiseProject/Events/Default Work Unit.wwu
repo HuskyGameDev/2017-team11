@@ -17,6 +17,62 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Cat_Fight_Meow" ID="{E8236BA9-5A89-476B-95FB-C4939B9FAD94}">
+					<ChildrenList>
+						<Action Name="" ID="{8217ACC7-C9F9-40C7-9E97-4422606BD14C}" ShortID="1031117032">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fight Meow" ID="{A0AECE0E-8FE6-478A-9AB0-579262B08F1D}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Growl" ID="{AEE7CE58-DFA7-42C5-839B-0DBE7F6A5AB3}">
+					<ChildrenList>
+						<Action Name="" ID="{6B24664F-EA74-4123-9AF0-76BBF1F999B2}" ShortID="81576578">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Growl 1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Pain_Meow" ID="{314A7934-CE62-4982-8B3A-E26DC7C29F75}">
+					<ChildrenList>
+						<Action Name="" ID="{82B7F569-9EB7-4747-A08E-83A373E7AF49}" ShortID="68897455">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cries of Pain 2" ID="{3C5F06F8-66FD-4060-AF19-7196511B3C1B}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Battle_Music" ID="{81B61527-B5CD-422C-9C45-8C433E539801}">
+					<ChildrenList>
+						<Action Name="" ID="{36190E6F-2BCB-40A8-AA2A-076635D737A0}" ShortID="852230036">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
