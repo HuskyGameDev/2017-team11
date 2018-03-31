@@ -1,9 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	261597827	Cat_Fight_Meow			\Default Work Unit\Cat_Fight_Meow	
+	775186441	Cat_Pain_Meow			\Default Work Unit\Cat_Pain_Meow	
 	2776714809	Cat_Growl			\Default Work Unit\Cat_Growl	
 	3636054434	Cat_Purrs			\Default Work Unit\Cat_Purrs	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	74126020	Cries of Pain 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Cries of Pain 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cries of Pain 2		172920
 	573551727	Purrs	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Purrs 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Purrs		4406520
 	640818936	Fight Meow	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Fight Meow_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fight Meow		172920
 	653191822	Growl 1	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Growl 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl 1		264792
