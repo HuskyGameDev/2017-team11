@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CAT_FIGHT_MEOW = 261597827U;
+        static const AkUniqueID CAT_GROWL = 2776714809U;
         static const AkUniqueID CAT_PURRS = 3636054434U;
     } // namespace EVENTS
 
