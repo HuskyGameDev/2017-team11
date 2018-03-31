@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Action;
+using AI;
 using Inventory;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -10,8 +11,10 @@ namespace Entity {
     /// <summary>
     /// A friendly or enemy entity w/ attributes, active effects, and inventory.
     /// </summary>
-    [Serializable] public class Entity {
-        public ushort EntityId;
+    [Serializable] public class Entity
+    {
+        [NonSerialized] private GameObject _gameObject;
+        [NonSerialized] private GameEntity _gameEntity;
 
         public Attribute MentalResist = new Attribute(0);
         public Attribute Armor = new Attribute(0);
@@ -22,10 +25,9 @@ namespace Entity {
         // Crit damage is / 100.0f when applied
         public Attribute CritDamage = new Attribute(50);
 
-        public Entity(ushort entityId = 0)
+        public Entity()
         {
-            EntityId = entityId;
-            Onesie.SetSpriteName(EntityId);
+            // Nothing here...
         }
 
         #region Inventory
@@ -44,7 +46,6 @@ namespace Entity {
                 onesie = new Onesie(GameRegistry.DefaultOnesieName);
             var oldOnesie = Onesie;
             Onesie = onesie;
-            Onesie.SetSpriteName(EntityId);
 
             MentalResist.Temporary = MentalResist.Temporary - oldOnesie.MentalResistMod + Onesie.MentalResistMod;
             Armor.Temporary = Armor.Temporary - oldOnesie.ArmorMod + Onesie.ArmorMod;
@@ -241,7 +242,7 @@ namespace Entity {
                 {
                     HitPoints.Damage(damage);
                     if(Onesie.OnHitSoundEventName != null)
-                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, PlayerController.Instance.Cats[0].gameObject);
+                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, PlayerAi.Instance.CatEntities[0].gameObject);
                 }
             }
         }
@@ -249,7 +250,7 @@ namespace Entity {
 
         public Entity Clone()
         {
-            var @new = new Entity(EntityId);
+            var @new = new Entity();
             @new.MentalResist = new Attribute(MentalResist.Current, MentalResist.Maximum, MentalResist.Temporary);
             @new.Armor = new Attribute(Armor.Current, Armor.Maximum, Armor.Temporary);
             @new.PoisonResist = new Attribute(PoisonResist.Current, PoisonResist.Maximum, PoisonResist.Temporary);
@@ -268,9 +269,30 @@ namespace Entity {
             return @new;
         }
 
+        /// <summary>
+        /// Gets an attack from the entity or onesie.
+        /// </summary>
+        /// <param name="attackIndex"># of the attack</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected Attack GetAttack(byte attackIndex)
         {
             return Onesie.Attacks[attackIndex];
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        void LoadTo(GameObject gameObject)
+        {
+            _gameObject = gameObject;
+            _gameEntity = _gameObject.GetComponent<GameEntity>();
+            _gameEntity.MyEntity = this;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        void Unload()
+        {
+            _gameEntity.MyEntity = null;
+            _gameEntity = null;
+            _gameObject = null;
         }
     }
 }

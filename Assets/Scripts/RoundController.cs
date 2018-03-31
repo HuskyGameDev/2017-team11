@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using AI;
 using Entity;
 using Inventory;
@@ -18,14 +17,13 @@ public class RoundController : MonoBehaviour
     public bool IsPlayerTurn = true;
     public bool IsNewTurn = true;
     public GameEntity[] EnemyEntities;
-    public IEntityTurnController PlayerAiController, EnemyAiController;
+    public IEntityTurnController EnemyAiController;
 
     private void Awake() => Instance = this;
     private void OnDestroy() => Instance = null;
 
     private void Start()
     {
-        PlayerAiController = PlayerController.Instance.GetComponent<PlayerAi>();
         EnemyAiController = GetComponent<EnemyAi>();
         EnemyEntities[0].EquipOnesie(new Onesie("Box"));
         AkSoundEngine.PostEvent("Battle_Music", gameObject);
@@ -39,22 +37,22 @@ public class RoundController : MonoBehaviour
             {
                 for (var i = 0; i < PlayerController.Instance.Cats.Length; i++)
                     // tick effects on each cat.
-                    PlayerController.Instance.Cats[i].MyEntity.ProcessEffects();
-                PlayerAiController.BeginTurn();
+                    PlayerController.Instance.Cats[i].ProcessEffects();
+                PlayerAi.Instance.BeginTurn();
 
                 IsNewTurn = false;
             }
 
-            if (PlayerAiController.IsMoveAvailable())
+            if (PlayerAi.Instance.IsMoveAvailable())
             {
                 // perform available moves.
-                var moveList = PlayerAiController.GetMoves();
+                var moveList = PlayerAi.Instance.GetMoves();
                 for (var i = 0; i < moveList.Count; i++)
                     moveList[i].Perform();
-                PlayerAiController.DoneWithMoves();
+                PlayerAi.Instance.DoneWithMoves();
             }
 
-            if (PlayerAiController.IsTurnOver())
+            if (PlayerAi.Instance.IsTurnOver())
             {
                 IsPlayerTurn = false;
                 IsNewTurn = true;

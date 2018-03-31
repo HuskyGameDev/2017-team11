@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Entity;
 using UnityEngine;
 
 namespace AI
@@ -9,6 +10,11 @@ namespace AI
     /// </summary>
     public class PlayerAi : MonoBehaviour, IEntityTurnController
     {
+        public static PlayerAi Instance;
+
+        private void Awake() => Instance = this;
+        private void OnDestroy() => Instance = null;
+
         private bool _turnOver = true;
         private readonly List<Move> _moves = new List<Move>();
 
@@ -26,7 +32,7 @@ namespace AI
         private void ExecuteAttack(byte attackIndex)
         {
             Debug.Log($"Doing attack: {attackIndex}");
-            _moves.Add(PlayerController.Instance.Cats[0].GetAttackMove(attackIndex));
+            _moves.Add(CatEntities[0].GetAttackMove(attackIndex));
             _turnOver = true;
         }
 
@@ -38,5 +44,7 @@ namespace AI
         public void ExecuteAttack3() => ExecuteAttack(3);
 
         #endregion
+        
+        public GameEntity[] CatEntities;
     }
 }

@@ -262,7 +262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyEntity:
-    EntityId: 1
     MentalResist:
       Current: 0
       Maximum: 1
@@ -364,6 +363,7 @@ GameObject:
   - component: {fileID: 724477685}
   - component: {fileID: 724477684}
   - component: {fileID: 724477683}
+  - component: {fileID: 724477686}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -417,6 +417,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724477686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724477682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead5a7a8f8afe524ea482d975a3dd73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  valueGuid: aab67eb328270446853b9a1b7b7445fd
+  bankName: Cataclysm_Sound_Bank
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
 --- !u!1 &730698200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1505,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cats:
-  - {fileID: 1894646676}
+  - MentalResist:
+      Current: 0
+      Maximum: 0
+      Temporary: 0
+    Armor:
+      Current: 0
+      Maximum: 0
+      Temporary: 0
+    PoisonResist:
+      Current: 0
+      Maximum: 0
+      Temporary: 0
+    HitPoints:
+      Current: 1
+      Maximum: 1
+      Temporary: 0
+    CritChance:
+      Current: 10
+      Maximum: 10
+      Temporary: 0
+    CritDamage:
+      Current: 50
+      Maximum: 50
+      Temporary: 0
+    Onesie:
+      SpriteName: 
+      HitPointsMod: 0
+      ArmorMod: 0
+      PoisonResistMod: 0
+      MentalResistMod: 0
+      CritChance: 0
+      CritDamage: 0
+      OnHitSoundEventName: 
+    EquippedInventory: []
 --- !u!114 &1380467920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,6 +1550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5d4ef8259d43cbb11db2e3b41e85c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CatEntities:
+  - {fileID: 1894646676}
 --- !u!4 &1380467921
 Transform:
   m_ObjectHideFlags: 0
@@ -2108,7 +2162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyEntity:
-    EntityId: 0
     MentalResist:
       Current: 0
       Maximum: 1

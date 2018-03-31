@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0a2a20d88ae614abe0a73277dde8e0, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: 
+  CurrentPluginConfig: Debug
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}'
-    m_lastTimePsrt1: 1015605398
-    m_lastTimePart2: -1999268049
+    m_lastTimePsrt1: -1912347876
+    m_lastTimePart2: -1999268047
     List:
     - Name: Battle_Music
       Path: Default Work Unit\Battle_Music
@@ -94,8 +94,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{93A491BE-F801-4898-B34B-D75CA871806E}'
-    m_lastTimePsrt1: 1015630572
-    m_lastTimePart2: -1999268049
+    m_lastTimePsrt1: -1908740498
+    m_lastTimePart2: -1999268047
     List:
     - Name: Cataclysm_Sound_Bank
       Path: Default Work Unit\Cataclysm_Sound_Bank
@@ -133,6 +133,8 @@ MonoBehaviour:
   - /Cataclysm_WwiseProject
   - /Cataclysm_WwiseProject/Events
   - /Cataclysm_WwiseProject/Events/Default Work Unit
+  - /Cataclysm_WwiseProject/SoundBanks
+  - /Cataclysm_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

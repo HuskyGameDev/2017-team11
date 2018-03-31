@@ -1,6 +1,5 @@
 ﻿using System;
 using AI;
-using Entity;
 using UnityEngine;
 
 [Serializable]
@@ -8,10 +7,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 	public static PlayerController Instance;
 	//TODO: variables for save info
-	public GameEntity[] Cats;
+	public Entity.Entity[] Cats;
 	//TODO: variables for inventory
 
-	void Awake() {
+	private void Awake() {
 		if(Instance == null) {
 			Instance = this;
 			DontDestroyOnLoad(gameObject);

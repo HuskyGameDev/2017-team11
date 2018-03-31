@@ -26,7 +26,7 @@ namespace AI
                 return;
             if (!GUILayout.Button("DoMonsterAttack"))
                 return;
-            _moves.Add(new Move(RoundController.Instance.EnemyEntities[0], PlayerController.Instance.Cats[0], new Attack(2)));
+            _moves.Add(new Move(RoundController.Instance.EnemyEntities[0], PlayerAi.Instance.CatEntities[0], new Attack(2)));
             _turnOver = true;
         }
     }

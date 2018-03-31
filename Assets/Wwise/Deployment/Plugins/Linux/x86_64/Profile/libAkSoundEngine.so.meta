@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2033ea19826be8b4e93e964c0c695382
-timeCreated: 1518808817
+timeCreated: 1522519600
 licenseType: Free
 PluginImporter:
   serializedVersion: 2
@@ -47,14 +47,14 @@ PluginImporter:
       first:
         Standalone: Linux64
       second:
-        enabled: 1
+        enabled: 0
         settings:
           CPU: x86_64
     data:
       first:
         Standalone: LinuxUniversal
       second:
-        enabled: 1
+        enabled: 0
         settings:
           CPU: x86_64
     data:
