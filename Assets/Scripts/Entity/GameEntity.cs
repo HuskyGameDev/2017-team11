@@ -36,7 +36,7 @@ namespace Entity {
         
         public Move GetAttackMove(byte attackIndex)
         {
-            return new Move(this, RoundController.Instance.EnemyEntities[0], null);
+            return new Move(this, RoundController.Instance.EnemyEntities[0], MyEntity.Onesie.Attacks[attackIndex]);
         }
     }
 }
