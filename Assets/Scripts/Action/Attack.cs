@@ -2,7 +2,7 @@
     /// <summary>
     /// Container for attack data.
     /// </summary>
-    public struct Attack {
+    public class Attack {
         public int PhysicalStrength;
         public Action[] Actions;
 

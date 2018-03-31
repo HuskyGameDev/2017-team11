@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Action;
 using UnityEngine;
 
 namespace AI
@@ -17,14 +16,10 @@ namespace AI
         public bool IsMoveAvailable() => _moves.Count > 0;
         public List<Move> GetMoves() => _moves;
         public void DoneWithMoves() => _moves.Clear();
-
-        private void OnGUI()
+        
+        public void ExecuteAttack(byte attackIndex)
         {
-            if (_turnOver)
-                return;
-            if (!GUILayout.Button("DoPlayerAttack"))
-                return;
-            _moves.Add(new Move(PlayerController.Instance.Cats[0], RoundController.Instance.EnemyEntities[0], new Attack(2)));
+            _moves.Add(PlayerController.Instance.Cats[0].GetAttackMove(attackIndex));
             _turnOver = true;
         }
     }

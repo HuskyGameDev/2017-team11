@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Runtime.Remoting.Messaging;
 using Action;
 using Inventory;
 using UnityEngine;
@@ -263,6 +262,11 @@ namespace Entity {
             foreach(var key in Immunities)
                 @new.Immunities.Add(key);
             return @new;
+        }
+
+        protected Attack GetAttack(byte attackIndex)
+        {
+            return Onesie.Attacks[attackIndex];
         }
     }
 }

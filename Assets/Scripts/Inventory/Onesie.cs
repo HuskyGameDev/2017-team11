@@ -16,6 +16,14 @@ namespace Inventory {
         public int CritChance;
         public int CritDamage;
 
+        public Attack[] Attacks =
+        {
+            new Attack(1),
+            new Attack(0, new Action.Action(ActionType.Bleeding, 4)),
+            new Attack(0, new Action.Action(ActionType.Burning, 4)),
+            new Attack(0, new Action.Action(ActionType.Bleeding, 2), new Action.Action(ActionType.Burning, 2)) 
+        };
+
         /// <summary>
         /// All the effects the onsie makes the entitiy immune to.
         /// </summary>

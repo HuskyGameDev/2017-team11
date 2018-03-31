@@ -1,4 +1,5 @@
 ﻿using System;
+using AI;
 using Cataclysm.Resources;
 using Inventory;
 using UnityEngine;
@@ -31,6 +32,11 @@ namespace Entity {
             var oldOnesie = MyEntity.EquipOnesie(onesie);
             _renderer.sprite = SpriteCache.GetSprite(MyEntity.Onesie.SpriteName);
             return oldOnesie;
+        }
+        
+        public Move GetAttackMove(byte attackIndex)
+        {
+            return new Move(this, RoundController.Instance.EnemyEntities[0], null);
         }
     }
 }
