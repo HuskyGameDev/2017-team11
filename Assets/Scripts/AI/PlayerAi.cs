@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace AI
@@ -17,10 +18,25 @@ namespace AI
         public List<Move> GetMoves() => _moves;
         public void DoneWithMoves() => _moves.Clear();
         
-        public void ExecuteAttack(byte attackIndex)
+        /// <summary>
+        /// Execute an attack
+        /// </summary>
+        /// <param name="attackIndex">Attack #</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private void ExecuteAttack(byte attackIndex)
         {
+            Debug.Log($"Doing attack: {attackIndex}");
             _moves.Add(PlayerController.Instance.Cats[0].GetAttackMove(attackIndex));
             _turnOver = true;
         }
+
+        #region UIFunctions
+
+        public void ExecuteAttack0() => ExecuteAttack(0);
+        public void ExecuteAttack1() => ExecuteAttack(1);
+        public void ExecuteAttack2() => ExecuteAttack(2);
+        public void ExecuteAttack3() => ExecuteAttack(3);
+
+        #endregion
     }
 }
