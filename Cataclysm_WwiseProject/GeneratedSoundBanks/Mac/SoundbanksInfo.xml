@@ -16,12 +16,32 @@
 			<ShortName>Cataclysm_Sound_Bank</ShortName>
 			<Path>Cataclysm_Sound_Bank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music"/>
+				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat_Fight_Meow"/>
+				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat_Growl"/>
+				<Event Id="775186441" Name="Cat_Pain_Meow" ObjectPath="\Events\Default Work Unit\Cat_Pain_Meow"/>
 				<Event Id="3636054434" Name="Cat_Purrs" ObjectPath="\Events\Default Work Unit\Cat_Purrs"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="11583260" Language="SFX">
+					<ShortName>Battle Music V2.wav</ShortName>
+					<Path>SFX\Battle Music V2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="74126020" Language="SFX">
+					<ShortName>Cries of Pain 2.wav</ShortName>
+					<Path>SFX\Cries of Pain 2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="573551727" Language="SFX">
 					<ShortName>Purrs 1.wav</ShortName>
 					<Path>SFX\Purrs 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="640818936" Language="SFX">
+					<ShortName>Fight Meow.wav</ShortName>
+					<Path>SFX\Fight Meow_1C9C67B2.wem</Path>
+				</File>
+				<File Id="653191822" Language="SFX">
+					<ShortName>Growl 1.wav</ShortName>
+					<Path>SFX\Growl 1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
