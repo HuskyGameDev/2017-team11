@@ -16,50 +16,78 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}'
-    m_lastTimePsrt1: 1480421913
-    m_lastTimePart2: -1999276686
-    List: []
+    m_lastTimePsrt1: 503845338
+    m_lastTimePart2: -1999273663
+    List:
+    - Name: Cat_Purrs
+      Path: Default Work Unit\Cat_Purrs
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Purrs
+        ObjectType: 3
+      ID: -658912862
+      Guid: 56ac9876808c1e4d9490ad1f4b74ec09
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{85C415A5-79D6-415F-ADF7-F5B1C2570998}'
-    m_lastTimePsrt1: 1480451937
-    m_lastTimePart2: -1999276686
+    m_lastTimePsrt1: 1388612888
+    m_lastTimePart2: -1999273678
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{558E473D-956F-471A-9ADA-D5F1E6A2AB8D}'
-    m_lastTimePsrt1: 1480902274
-    m_lastTimePart2: -1999276686
+    m_lastTimePsrt1: 1388662926
+    m_lastTimePart2: -1999273678
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0CEFEE58-3FB3-4295-99D3-E18E2CA0D333}'
-    m_lastTimePsrt1: 1481032346
-    m_lastTimePart2: -1999276686
+    m_lastTimePsrt1: 1388662926
+    m_lastTimePart2: -1999273678
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{93A491BE-F801-4898-B34B-D75CA871806E}'
-    m_lastTimePsrt1: 1480752150
-    m_lastTimePart2: -1999276686
-    List: []
+    m_lastTimePsrt1: 503900375
+    m_lastTimePart2: -1999273663
+    List:
+    - Name: Cataclysm_Sound_Bank
+      Path: Default Work Unit\Cataclysm_Sound_Bank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cataclysm_Sound_Bank
+        ObjectType: 7
+      ID: 1339736059
+      Guid: aab67eb328270446853b9a1b7b7445fd
+    - Name: PrimarySoundBank
+      Path: Default Work Unit\PrimarySoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PrimarySoundBank
+        ObjectType: 7
+      ID: -1941627856
+      Guid: f218ca6bf36b694caac6b8ce7d3ae7ad
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A34810B4-4E98-4966-B079-E65475A26855}'
-    m_lastTimePsrt1: 1481192458
-    m_lastTimePart2: -1999276686
+    m_lastTimePsrt1: 1388492809
+    m_lastTimePart2: -1999273678
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{11E77078-D815-46C6-99EA-26A5B395BF40}'
-    m_lastTimePsrt1: 1480271811
-    m_lastTimePart2: -1999276686
+    m_lastTimePsrt1: 1388672933
+    m_lastTimePart2: -1999273678
     List: []
   ExpandedItems:
   - /Cataclysm_WwiseProject
