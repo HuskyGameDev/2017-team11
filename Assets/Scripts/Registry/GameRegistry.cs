@@ -29,7 +29,5 @@ namespace Action
                 {ActionType.Bleeding, 6},
                 {ActionType.Burning, 10}
             };
-
-        public const string DefaultOnesieName = "Cat";
     }
 }

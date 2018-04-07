@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using AI;
+using Cataclysm.Resources;
 using UnityEngine;
 
 [Serializable]
@@ -7,7 +9,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 	public static PlayerController Instance;
 	//TODO: variables for save info
-	public Entity.Entity[] Cats;
+	/// <summary>
+	/// The list of the player's cats. They start with one cat.
+	/// </summary>
+	public List<Entity.Entity> Cats = new List<Entity.Entity>
+	{
+		new Entity.Entity(spriteType: SpriteType.GrayCat)
+	};
 	//TODO: variables for inventory
 
 	private void Awake() {

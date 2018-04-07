@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Action;
-using AI;
+using Cataclysm.Resources;
 using Inventory;
 using UnityEngine;
-using UnityEngine.VR.WSA;
 using Random = UnityEngine.Random;
 
 namespace Entity {
@@ -26,7 +25,7 @@ namespace Entity {
         // Crit damage is / 100.0f when applied
         public Attribute CritDamage;
 
-        public Entity(int health = 1, int armor = 0, int poisonResist = 0, int mentalResist = 0, int critChance = 10, int critDamage = 50, Onesie onesie = default(Onesie))
+        public Entity(int health = 1, int armor = 0, int poisonResist = 0, int mentalResist = 0, int critChance = 10, int critDamage = 50, Onesie onesie = default(Onesie), SpriteType spriteType = SpriteType.Monster)
         {
             MentalResist = new Attribute(mentalResist);
             Armor = new Attribute(armor);
@@ -34,6 +33,7 @@ namespace Entity {
             HitPoints = new Attribute(health);
             CritChance = new Attribute(critChance);
             CritDamage = new Attribute(critDamage);
+            SpriteType = spriteType;
             EquipOnesie(onesie);
         }
 
@@ -42,6 +42,7 @@ namespace Entity {
         /// The equipped onesie.
         /// </summary>
         public Onesie Onesie;
+        public SpriteType SpriteType;
         
         /// <summary>
         /// Equipped items: probably just onesies TODO
@@ -50,7 +51,7 @@ namespace Entity {
 
         public Onesie EquipOnesie(Onesie onesie) {
             if(onesie == null)
-                onesie = new Onesie(GameRegistry.DefaultOnesieName);
+                onesie = OnesieRegistry.DefaultOnesie;
             var oldOnesie = Onesie;
             Onesie = onesie;
 
@@ -71,6 +72,7 @@ namespace Entity {
         /// <summary>
         /// Effects that are active on this entity.
         /// </summary>
+        /// 
         public readonly List<ActionType> EffectList = new List<ActionType>();
 
         /// <summary>
@@ -283,6 +285,7 @@ namespace Entity {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected Attack GetAttack(byte attackIndex)
         {
+            if(Onesie.Attacks[attackIndex])
             return Onesie.Attacks[attackIndex];
         }
 

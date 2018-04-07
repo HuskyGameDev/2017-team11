@@ -38,7 +38,7 @@ public class RoundController : MonoBehaviour
         {
             if (IsNewTurn)
             {
-                for (var i = 0; i < PlayerController.Instance.Cats.Length; i++)
+                for (var i = 0; i < PlayerController.Instance.Cats.Count; i++)
                     // tick effects on each cat.
                     PlayerController.Instance.Cats[i].ProcessEffects();
                 PlayerAi.Instance.BeginTurn();

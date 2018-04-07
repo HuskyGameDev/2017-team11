@@ -18,13 +18,7 @@ namespace Inventory {
 
         public string OnHitSoundEventName = null;
 
-        public Attack[] Attacks =
-        {
-            new Attack(1),
-            new Attack(0, new Action.Action(ActionType.Bleeding, 4)),
-            new Attack(0, new Action.Action(ActionType.Burning, 4)),
-            new Attack(0, new Action.Action(ActionType.Bleeding, 2), new Action.Action(ActionType.Burning, 2)) 
-        };
+        public readonly Attack[] Attacks;
 
         /// <summary>
         /// All the effects the onsie makes the entitiy immune to.
@@ -35,11 +29,20 @@ namespace Inventory {
         /// </summary>
         public readonly Dictionary<ActionType, float> EffectModifiers = new Dictionary<ActionType, float>();
 
-        public Onesie(string baseName) {_baseName = baseName;}
+        public Onesie(string baseName, Attack[] attacks)
+        {
+            _baseName = baseName;
+            if (attacks == null)
+                throw new ArgumentNullException(nameof(attacks), "Attacks array is null.");
+            if (attacks.Length != 4)
+                throw new ArgumentOutOfRangeException(nameof(attacks), "Attacks array not of length 4.");
+            Attacks = attacks;
+        }
 
-        public void SetSpriteName(ushort entityId) {
-            SpriteName = $"Onesie/{_baseName}{entityId:x4}";
-            Debug.Log($"Set sprite name to \"{SpriteName}\" from ID {entityId}");
+        public void SetSpriteName(Entity.Entity entity)
+        {
+            SpriteName = $"Onesie/{entity.SpriteType}/{_baseName}";
+            Debug.Log($"Set sprite name to \"{SpriteName}\"");
         }
     }
 }
