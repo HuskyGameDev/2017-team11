@@ -18,7 +18,7 @@ public class MainMenuButtonActions : MonoBehaviour {
         Screen.fullScreen = isFull;
     }
 
-    // play button, back button, and settings button all load other scenes
+    // button command to load other scene
     public void LoadGameScene(string name)
     {
         SceneManager.LoadScene(name);
