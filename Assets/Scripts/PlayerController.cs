@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Action;
 using AI;
 using Cataclysm.Resources;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	public List<Entity.Entity> Cats = new List<Entity.Entity>
 	{
-		new Entity.Entity(spriteType: SpriteType.GrayCat)
+		new Entity.Entity(spriteType: SpriteType.GrayCat, onesie: OnesieRegistry.DefaultOnesie)
 	};
 	//TODO: variables for inventory
 

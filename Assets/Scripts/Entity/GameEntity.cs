@@ -12,7 +12,7 @@ namespace Entity {
     [Serializable]
     [RequireComponent(typeof(SpriteRenderer))]
     public class GameEntity : MonoBehaviour {
-        public Entity MyEntity = new Entity();
+        public Entity MyEntity;
         private SpriteRenderer _renderer;
 
         private void Awake() {
@@ -23,15 +23,22 @@ namespace Entity {
             SetEntity(MyEntity);
         }
 
-        public void SetEntity(Entity entity) {
-            MyEntity = entity;
-            _renderer.sprite = SpriteCache.GetSprite(MyEntity.Onesie.SpriteName);
+        private void OnDestroy()
+        {
+            if (MyEntity != null)
+                MyEntity.GameEntity = null;
         }
 
-        public Onesie EquipOnesie(Onesie onesie) {
-            var oldOnesie = MyEntity.EquipOnesie(onesie);
-            _renderer.sprite = SpriteCache.GetSprite(MyEntity.Onesie.SpriteName);
-            return oldOnesie;
+        public void SetEntity(Entity entity)
+        {
+            MyEntity = entity;
+            MyEntity.GameEntity = this;
+            RefreshSprite();
+        }
+
+        public void RefreshSprite()
+        {
+            _renderer.sprite = MyEntity == null ? null : SpriteCache.GetSprite(MyEntity.Onesie.SpriteName);
         }
         
         public Move GetAttackMove(byte attackIndex)

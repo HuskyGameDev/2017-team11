@@ -13,9 +13,7 @@ namespace Entity {
     /// </summary>
     [Serializable] public class Entity
     {
-        [NonSerialized] private GameObject _gameObject;
-        [NonSerialized] private GameEntity _gameEntity;
-
+        public GameEntity GameEntity;
         public Attribute MentalResist;
         public Attribute Armor;
         public Attribute PoisonResist;
@@ -54,15 +52,31 @@ namespace Entity {
                 onesie = OnesieRegistry.DefaultOnesie;
             var oldOnesie = Onesie;
             Onesie = onesie;
-
-            MentalResist.Temporary = MentalResist.Temporary - oldOnesie.MentalResistMod + Onesie.MentalResistMod;
-            Armor.Temporary = Armor.Temporary - oldOnesie.ArmorMod + Onesie.ArmorMod;
-            PoisonResist.Temporary = PoisonResist.Temporary - oldOnesie.PoisonResistMod + Onesie.PoisonResistMod;
-            HitPoints.Temporary = HitPoints.Temporary - oldOnesie.HitPointsMod + Onesie.HitPointsMod;
-            CritChance.Temporary = CritChance.Temporary - oldOnesie.CritChance + Onesie.CritChance;
-            CritDamage.Temporary = CritDamage.Temporary - oldOnesie.CritChance + Onesie.CritDamage;
-            CritChance.Current = CritChance.Temporary + CritChance.Maximum;
-            CritDamage.Current = CritChance.Temporary + CritChance.Maximum;
+            if (oldOnesie == null)
+            {
+                MentalResist.Temporary = MentalResist.Temporary + Onesie.MentalResistMod;
+                Armor.Temporary = Armor.Temporary + Onesie.ArmorMod;
+                PoisonResist.Temporary = PoisonResist.Temporary + Onesie.PoisonResistMod;
+                HitPoints.Temporary = HitPoints.Temporary + Onesie.HitPointsMod;
+                CritChance.Temporary = CritChance.Temporary + Onesie.CritChance;
+                CritDamage.Temporary = CritDamage.Temporary + Onesie.CritDamage;
+                CritChance.Current = CritChance.Temporary + CritChance.Maximum;
+                CritDamage.Current = CritChance.Temporary + CritChance.Maximum;
+            }
+            else
+            {
+                MentalResist.Temporary = MentalResist.Temporary - oldOnesie.MentalResistMod + Onesie.MentalResistMod;
+                Armor.Temporary = Armor.Temporary - oldOnesie.ArmorMod + Onesie.ArmorMod;
+                PoisonResist.Temporary = PoisonResist.Temporary - oldOnesie.PoisonResistMod + Onesie.PoisonResistMod;
+                HitPoints.Temporary = HitPoints.Temporary - oldOnesie.HitPointsMod + Onesie.HitPointsMod;
+                CritChance.Temporary = CritChance.Temporary - oldOnesie.CritChance + Onesie.CritChance;
+                CritDamage.Temporary = CritDamage.Temporary - oldOnesie.CritChance + Onesie.CritDamage;
+                CritChance.Current = CritChance.Temporary + CritChance.Maximum;
+                CritDamage.Current = CritChance.Temporary + CritChance.Maximum;
+            }
+            Onesie.SetSpriteName(SpriteType);
+            if(GameEntity != null)
+                GameEntity.RefreshSprite();
             
             return oldOnesie;
         }
@@ -168,14 +182,7 @@ namespace Entity {
         private bool CriticalHit()
         {
             var it = Random.value <= CritChance.Current / 100.0f;
-            if (it)
-            {
-                Debug.Log("Critical hit!");
-            }
-            else
-            {
-                Debug.Log("Normal hit!");
-            }
+            Debug.Log(it ? "Critical hit!" : "Normal hit!");
 
             return it;
         }
@@ -285,24 +292,7 @@ namespace Entity {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected Attack GetAttack(byte attackIndex)
         {
-            if(Onesie.Attacks[attackIndex])
             return Onesie.Attacks[attackIndex];
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        void LoadTo(GameObject gameObject)
-        {
-            _gameObject = gameObject;
-            _gameEntity = _gameObject.GetComponent<GameEntity>();
-            _gameEntity.MyEntity = this;
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        void Unload()
-        {
-            _gameEntity.MyEntity = null;
-            _gameEntity = null;
-            _gameObject = null;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Action;
+using Cataclysm.Resources;
 using UnityEngine;
 
 namespace Inventory {
@@ -9,12 +10,12 @@ namespace Inventory {
         private readonly string _baseName;
         public string SpriteName;
         
-        public int HitPointsMod;
-        public int ArmorMod;
-        public int PoisonResistMod;
-        public int MentalResistMod;
-        public int CritChance;
-        public int CritDamage;
+        public readonly int HitPointsMod;
+        public readonly int ArmorMod;
+        public readonly int PoisonResistMod;
+        public readonly int MentalResistMod;
+        public readonly int CritChance;
+        public readonly int CritDamage;
 
         public string OnHitSoundEventName = null;
 
@@ -27,9 +28,10 @@ namespace Inventory {
         /// <summary>
         /// Per-effect multipliers for taking damage/etc.
         /// </summary>
+        // ReSharper disable once CollectionNeverUpdated.Global
         public readonly Dictionary<ActionType, float> EffectModifiers = new Dictionary<ActionType, float>();
 
-        public Onesie(string baseName, Attack[] attacks)
+        public Onesie(string baseName, Attack[] attacks, int hitPointsMod = 0, int armorMod = 0, int poisonResistMod = 0, int mentalResistMod = 0, int critChanceMod = 0, int critDamageMod = 0)
         {
             _baseName = baseName;
             if (attacks == null)
@@ -37,11 +39,17 @@ namespace Inventory {
             if (attacks.Length != 4)
                 throw new ArgumentOutOfRangeException(nameof(attacks), "Attacks array not of length 4.");
             Attacks = attacks;
+            HitPointsMod = hitPointsMod;
+            ArmorMod = armorMod;
+            PoisonResistMod = poisonResistMod;
+            MentalResistMod = mentalResistMod;
+            CritChance = critChanceMod;
+            CritDamage = critDamageMod;
         }
 
-        public void SetSpriteName(Entity.Entity entity)
+        public void SetSpriteName(SpriteType spriteType)
         {
-            SpriteName = $"Onesie/{entity.SpriteType}/{_baseName}";
+            SpriteName = $"Onesie/{spriteType}/{_baseName}";
             Debug.Log($"Set sprite name to \"{SpriteName}\"");
         }
     }
