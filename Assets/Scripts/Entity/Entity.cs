@@ -5,6 +5,7 @@ using Action;
 using AI;
 using Inventory;
 using UnityEngine;
+using UnityEngine.VR.WSA;
 using Random = UnityEngine.Random;
 
 namespace Entity {
@@ -16,25 +17,31 @@ namespace Entity {
         [NonSerialized] private GameObject _gameObject;
         [NonSerialized] private GameEntity _gameEntity;
 
-        public Attribute MentalResist = new Attribute(0);
-        public Attribute Armor = new Attribute(0);
-        public Attribute PoisonResist = new Attribute(0);
-        public Attribute HitPoints = new Attribute(1);
+        public Attribute MentalResist;
+        public Attribute Armor;
+        public Attribute PoisonResist;
+        public Attribute HitPoints;
         // Crit chance is / 100.0f when applied
-        public Attribute CritChance = new Attribute(10);
+        public Attribute CritChance;
         // Crit damage is / 100.0f when applied
-        public Attribute CritDamage = new Attribute(50);
+        public Attribute CritDamage;
 
-        public Entity()
+        public Entity(int health = 1, int armor = 0, int poisonResist = 0, int mentalResist = 0, int critChance = 10, int critDamage = 50, Onesie onesie = default(Onesie))
         {
-            // Nothing here...
+            MentalResist = new Attribute(mentalResist);
+            Armor = new Attribute(armor);
+            PoisonResist = new Attribute(poisonResist);
+            HitPoints = new Attribute(health);
+            CritChance = new Attribute(critChance);
+            CritDamage = new Attribute(critDamage);
+            EquipOnesie(onesie);
         }
 
         #region Inventory
         /// <summary>
         /// The equipped onesie.
         /// </summary>
-        public Onesie Onesie = new Onesie(GameRegistry.DefaultOnesieName);
+        public Onesie Onesie;
         
         /// <summary>
         /// Equipped items: probably just onesies TODO

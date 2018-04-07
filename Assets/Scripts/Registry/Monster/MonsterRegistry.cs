@@ -10,16 +10,22 @@ namespace Registry.Monster
         public static Entity.Entity GetRandomMonsterEntity(Region region, Rarity rarity, bool unique = true)
         {
             var list = registry[region][rarity];
+            if (list.Count == 0)
+                list = registry[region][Rarity.Common];
+            if (list.Count == 0)
+                list = registry[region][Rarity.Common];
+            if (list.Count == 0)
+                return unique ? BoxMonster01.Clone() : BoxMonster01;
             return unique ? list[_random.Next(list.Count)].Clone() : list[_random.Next(list.Count)];
         }
 
-        private static readonly Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>> registry;
+        private static readonly Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>> registry =
+            new Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>>();
 
-        public static readonly Entity.Entity BoxMonster01 = new Entity.Entity();
+        public static readonly Entity.Entity BoxMonster01 = new Entity.Entity(armor: 15, health: 50);
 
         static MonsterRegistry()
         {
-            registry = new Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>>();
             Region[] regionList = (Region[]) Enum.GetValues(typeof(Region));
             Rarity[] rarityList = (Rarity[]) Enum.GetValues(typeof(Rarity));
             foreach (var region in regionList)
@@ -28,7 +34,7 @@ namespace Registry.Monster
                 foreach (var rarity in rarityList)
                     registry[region][rarity] = new List<Entity.Entity>();
             }
-            
+
             registry[Region.City][Rarity.Common].Add(BoxMonster01);
         }
     }
