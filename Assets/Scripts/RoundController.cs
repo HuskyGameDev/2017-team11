@@ -2,6 +2,7 @@
 using AI;
 using Entity;
 using Inventory;
+using Registry.Monster;
 using UnityEngine;
 
 /// <inheritdoc />
@@ -17,6 +18,7 @@ public class RoundController : MonoBehaviour
     public bool IsPlayerTurn = true;
     public bool IsNewTurn = true;
     public GameEntity[] EnemyEntities;
+    public GameEntity[] CatEntities;
     public IEntityTurnController EnemyAiController;
 
     private void Awake() => Instance = this;
@@ -25,7 +27,8 @@ public class RoundController : MonoBehaviour
     private void Start()
     {
         EnemyAiController = GetComponent<EnemyAi>();
-        EnemyEntities[0].EquipOnesie(new Onesie("Box"));
+        EnemyEntities[0].SetEntity(MonsterRegistry.GetRandomMonsterEntity(Region.City, Rarity.Common));
+        
         AkSoundEngine.PostEvent("Battle_Music", gameObject);
     }
 

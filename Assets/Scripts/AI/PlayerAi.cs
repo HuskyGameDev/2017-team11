@@ -32,7 +32,7 @@ namespace AI
         private void ExecuteAttack(byte attackIndex)
         {
             Debug.Log($"Doing attack: {attackIndex}");
-            _moves.Add(CatEntities[0].GetAttackMove(attackIndex));
+            _moves.Add(RoundController.Instance.CatEntities[0].GetAttackMove(attackIndex));
             _turnOver = true;
         }
 
@@ -44,7 +44,5 @@ namespace AI
         public void ExecuteAttack3() => ExecuteAttack(3);
 
         #endregion
-        
-        public GameEntity[] CatEntities;
     }
 }

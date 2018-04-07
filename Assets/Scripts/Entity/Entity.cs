@@ -242,7 +242,7 @@ namespace Entity {
                 {
                     HitPoints.Damage(damage);
                     if(Onesie.OnHitSoundEventName != null)
-                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, PlayerAi.Instance.CatEntities[0].gameObject);
+                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, RoundController.Instance.CatEntities[0].gameObject);
                 }
             }
         }
