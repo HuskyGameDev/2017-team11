@@ -13,18 +13,23 @@ namespace Registry.Monster
             return unique ? list[_random.Next(list.Count)].Clone() : list[_random.Next(list.Count)];
         }
 
-        private static Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>> registry =
-            new Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>>
-            {
-                {Region.City,new Dictionary<Rarity, List<Entity.Entity>>
-                {
-                    {Rarity.Common, new List<Entity.Entity>
-                    {
-                        BoxMonster01
-                    }}
-                }}
-            };
+        private static readonly Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>> registry;
 
         public static readonly Entity.Entity BoxMonster01 = new Entity.Entity();
+
+        static MonsterRegistry()
+        {
+            registry = new Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>>();
+            Region[] regionList = (Region[]) Enum.GetValues(typeof(Region));
+            Rarity[] rarityList = (Rarity[]) Enum.GetValues(typeof(Rarity));
+            foreach (var region in regionList)
+            {
+                registry[region] = new Dictionary<Rarity, List<Entity.Entity>>();
+                foreach (var rarity in rarityList)
+                    registry[region][rarity] = new List<Entity.Entity>();
+            }
+            
+            registry[Region.City][Rarity.Common].Add(BoxMonster01);
+        }
     }
 }

@@ -16,7 +16,8 @@ namespace Action
             {
                 {ActionType.Physical,new ActionDescription(ActionKind.Condition, ActionBehavior.Intensity, 2.0f, 0.0f, 0.0f, 0.0f)},
                 {ActionType.Bleeding,new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 0.0f, 0.0f, 0.0f, 0.0f)},
-                {ActionType.Burning, new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 5.0f, 0.0f, 0.0f, 0.0f)}
+                {ActionType.Burning, new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 5.0f, 0.0f, 0.0f, 0.0f)},
+                {ActionType.Poison, new ActionDescription(ActionKind.Condition, ActionBehavior.Capping, 0.0f, 0.5f, 0.0f, 0.0f)}
             };
         
         /// <summary>

@@ -12,6 +12,7 @@ namespace Action
     {
         Physical,
         Burning,
-        Bleeding
+        Bleeding,
+        Poison
     }
 }
