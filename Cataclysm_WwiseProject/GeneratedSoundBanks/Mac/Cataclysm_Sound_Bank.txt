@@ -2,12 +2,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	261597827	Cat_Fight_Meow			\Default Work Unit\Cat_Fight_Meow	
 	775186441	Cat_Pain_Meow			\Default Work Unit\Cat_Pain_Meow	
 	2776714809	Cat_Growl			\Default Work Unit\Cat_Growl	
+	3166863326	Cat_Growl_2			\Default Work Unit\Cat_Growl_2	
 	3276472951	City_Ambience			\Default Work Unit\City_Ambience	
 	3473977150	Defeat_Sigh			\Default Work Unit\Defeat_Sigh	
 	3636054434	Cat_Purrs			\Default Work Unit\Cat_Purrs	
 	3832016031	Battle_Music			\Default Work Unit\Battle_Music	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	5578814	Growl 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Growl 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl 2		419140
 	11583260	Battle Music V2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Battle Music V2_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Battle Music V2		4838544
 	74126020	Cries of Pain 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Cries of Pain 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cries of Pain 2		172920
 	84381778	Defeat Sigh	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Defeat Sigh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Defeat Sigh		617544

@@ -87,6 +87,44 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Defeat_Sigh" ID="{DF72B88E-551E-47CA-92D7-F0C675C2EF97}">
+					<ChildrenList>
+						<Action Name="" ID="{C48D950F-53B3-4CC8-9D3B-8D4EE1829377}" ShortID="999196655">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Defeat Sigh" ID="{F0B8D564-B05A-40AC-A81F-7E8444D778CD}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F27146E5-1E58-4B06-88D5-378DBC17B0C0}" ShortID="165380200">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Growl 2" ID="{78238832-E433-4217-BB94-9572BA4EEFB2}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Growl_2" ID="{35E4590C-6019-43AC-B842-A834F826E1E3}">
+					<ChildrenList>
+						<Action Name="" ID="{9A1A4512-61E5-47FC-B35E-B26104AC0171}" ShortID="396602073">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Growl 2" ID="{78238832-E433-4217-BB94-9572BA4EEFB2}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

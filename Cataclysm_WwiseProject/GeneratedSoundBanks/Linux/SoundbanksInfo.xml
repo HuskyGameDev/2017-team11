@@ -19,12 +19,17 @@
 				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music"/>
 				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat_Fight_Meow"/>
 				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat_Growl"/>
+				<Event Id="3166863326" Name="Cat_Growl_2" ObjectPath="\Events\Default Work Unit\Cat_Growl_2"/>
 				<Event Id="775186441" Name="Cat_Pain_Meow" ObjectPath="\Events\Default Work Unit\Cat_Pain_Meow"/>
 				<Event Id="3636054434" Name="Cat_Purrs" ObjectPath="\Events\Default Work Unit\Cat_Purrs"/>
 				<Event Id="3276472951" Name="City_Ambience" ObjectPath="\Events\Default Work Unit\City_Ambience"/>
 				<Event Id="3473977150" Name="Defeat_Sigh" ObjectPath="\Events\Default Work Unit\Defeat_Sigh"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="5578814" Language="SFX">
+					<ShortName>Growl 2.wav</ShortName>
+					<Path>SFX\Growl 2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="11583260" Language="SFX">
 					<ShortName>Battle Music V2.wav</ShortName>
 					<Path>SFX\Battle Music V2_F17FB28C.wem</Path>
