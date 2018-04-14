@@ -25,7 +25,7 @@ namespace Entity
         /// <summary>
         /// Partial damage float (clamped to 1/16)
         /// </summary>
-        private float delta;
+        private float _delta;
 
         public Attribute(int value) : this(value, value, 0) {}
         public Attribute(int current, int maximum) : this(current, maximum, 0) {}
@@ -34,7 +34,7 @@ namespace Entity
             Maximum = maximum;
             Temporary = temporary;
             Current = 0;
-            delta = 0.0f;
+            _delta = 0.0f;
             CurrentProperty = current;
         }
         
@@ -64,12 +64,12 @@ namespace Entity
         /// </summary>
         /// <param name="amount">The amount of damage to take, or heal (if negative).</param>
         public void Damage(float amount) {
-            amount += delta;
+            amount += _delta;
             if(amount > Current)
                 Current = 0;
             else {
                 var take = (int) (amount + 0.5f);
-                delta = amount - take;
+                _delta = amount - take;
                 CurrentProperty -= take;
             }
         }

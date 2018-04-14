@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq.Expressions;
-using Action;
-using Entity;
+using Registry;
 using UnityEngine;
 
 namespace AI
@@ -9,24 +7,36 @@ namespace AI
     /// <summary>
     /// Enemy AI.
     /// </summary>
+    /// <inheritdoc cref="IEntityTurnController" />
     public class EnemyAi : MonoBehaviour, IEntityTurnController
     {
+        /// <summary>
+        /// Enemy turn time in seconds.
+        /// </summary>
+        private const float EnemyTurnTime = 3.0f;
         private bool _turnOver = true;
+        private float _timer;
         private readonly List<Move> _moves = new List<Move>();
 
-        public void BeginTurn() => _turnOver = false;
+        public void BeginTurn()
+        {
+            _turnOver = false;
+            _timer = 0.0f;
+        }
         public bool IsTurnOver() => _turnOver;
         public bool IsMoveAvailable() => _moves.Count > 0;
         public List<Move> GetMoves() => _moves;
         public void DoneWithMoves() => _moves.Clear();
 
-        private void OnGUI()
+        private void Update()
         {
-            if (_turnOver)
+            if(_turnOver)
                 return;
-            if (!GUILayout.Button("DoMonsterAttack"))
+            _timer += Time.deltaTime;
+            if(_timer < EnemyTurnTime)
                 return;
-            _moves.Add(new Move(RoundController.Instance.EnemyEntities[0], RoundController.Instance.CatEntities[0], new Attack(2)));
+            var thisEntity = RoundController.Instance.EnemyEntities[0];
+            _moves.Add(new Move(thisEntity, RoundController.Instance.CatEntities[0], thisEntity.MyEntity.Onesie.Attacks[GameRegistry.Random.Next(thisEntity.MyEntity.Onesie.Attacks.Length)]));
             _turnOver = true;
         }
     }

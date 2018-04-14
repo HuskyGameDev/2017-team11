@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Entity;
 using UnityEngine;
 
 namespace AI
@@ -8,6 +7,7 @@ namespace AI
     /// <summary>
     /// Player controls; UI updates this, and turn ends when button is clicked?
     /// </summary>
+    /// <inheritdoc cref="IEntityTurnController" />
     public class PlayerAi : MonoBehaviour, IEntityTurnController
     {
         public static PlayerAi Instance;

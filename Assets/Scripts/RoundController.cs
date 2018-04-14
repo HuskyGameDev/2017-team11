@@ -54,11 +54,8 @@ public class RoundController : MonoBehaviour
                 PlayerAi.Instance.DoneWithMoves();
             }
 
-            if (PlayerAi.Instance.IsTurnOver())
-            {
-                IsPlayerTurn = false;
-                IsNewTurn = true;
-            }
+            if (!PlayerAi.Instance.IsTurnOver())
+                return;
         }
         else // monster turn
         {
@@ -81,11 +78,11 @@ public class RoundController : MonoBehaviour
                 EnemyAiController.DoneWithMoves();
             }
 
-            if (EnemyAiController.IsTurnOver())
-            {
-                IsPlayerTurn = true;
-                IsNewTurn = true;
-            }
+            if (!EnemyAiController.IsTurnOver())
+                return;
         }
+
+        IsPlayerTurn = !IsPlayerTurn;
+        IsNewTurn = true;
     }
 }

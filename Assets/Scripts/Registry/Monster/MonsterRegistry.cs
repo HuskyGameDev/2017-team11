@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Action;
 
 namespace Registry.Monster
 {
     public static class MonsterRegistry
     {
-        private static Random _random = new Random();
-
         public static Entity.Entity GetRandomMonsterEntity(Region region, Rarity rarity, bool unique = true)
         {
             var list = Registry[region][rarity];
@@ -17,7 +14,7 @@ namespace Registry.Monster
                 list = Registry[region][Rarity.Common];
             if (list.Count == 0)
                 return unique ? BoxMonster01.Clone() : BoxMonster01;
-            return unique ? list[_random.Next(list.Count)].Clone() : list[_random.Next(list.Count)];
+            return unique ? list[GameRegistry.Random.Next(list.Count)].Clone() : list[GameRegistry.Random.Next(list.Count)];
         }
 
         private static readonly Dictionary<Region, Dictionary<Rarity, List<Entity.Entity>>> Registry =
@@ -27,8 +24,8 @@ namespace Registry.Monster
 
         static MonsterRegistry()
         {
-            Region[] regionList = (Region[]) Enum.GetValues(typeof(Region));
-            Rarity[] rarityList = (Rarity[]) Enum.GetValues(typeof(Rarity));
+            var regionList = (Region[]) Enum.GetValues(typeof(Region));
+            var rarityList = (Rarity[]) Enum.GetValues(typeof(Rarity));
             foreach (var region in regionList)
             {
                 Registry[region] = new Dictionary<Rarity, List<Entity.Entity>>();

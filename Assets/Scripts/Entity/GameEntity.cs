@@ -1,7 +1,6 @@
 ﻿using System;
 using AI;
 using Cataclysm.Resources;
-using Inventory;
 using UnityEngine;
 
 namespace Entity {
@@ -9,6 +8,7 @@ namespace Entity {
     /// Brings an <see cref="Entity"/> into the Unity real-world. We don't store attributes directly in here
     /// to make it a bit easier to swap cats in and out.
     /// </summary>
+    /// <inheritdoc />
     [Serializable]
     [RequireComponent(typeof(SpriteRenderer))]
     public class GameEntity : MonoBehaviour {

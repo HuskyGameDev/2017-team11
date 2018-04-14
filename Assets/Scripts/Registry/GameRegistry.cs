@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Action;
 
-namespace Action
+namespace Registry
 {
     /// <summary>
     /// Registries of various things.
@@ -29,5 +31,10 @@ namespace Action
                 {ActionType.Bleeding, 6},
                 {ActionType.Burning, 10}
             };
+        
+        /// <summary>
+        /// The sole (non-Unity) RNG for the game; used for randomly selecting elements from arrays. 
+        /// </summary>
+        public static readonly Random Random = new Random();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Action;
 using Cataclysm.Resources;
@@ -143,6 +144,8 @@ namespace Entity {
                         case ActionBehavior.Intensity:
                             Effects[type].Add(duration);
                             break;
+                        default:
+                            throw new InvalidEnumArgumentException();
                     }
                 }
             }
@@ -260,15 +263,14 @@ namespace Entity {
                     damage -= resisted;
                 }
 
-                if (damage > 0)
-                {
-                    HitPoints.Damage(damage);
-                    if (Onesie.OnHitSoundEventName != null && GameEntity != null)
-                    {
-                        Debug.Log($"Posting event: {Onesie.OnHitSoundEventName}");
-                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, GameEntity.gameObject);
-                    }
-                }
+                if (damage <= 0)
+                    return;
+                HitPoints.Damage(damage);
+                if(GameEntity == null)
+                    return;
+                if(Onesie.OnHitSoundEventName == null)
+                    return;
+                AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, GameEntity.gameObject);
             }
         }
         #endregion
