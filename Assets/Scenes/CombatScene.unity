@@ -287,11 +287,10 @@ MonoBehaviour:
       Current: 0
       Maximum: 0
       Temporary: 0
-    Onesie:
-      OnHitSoundEventName: 
     SpriteType: 0
     SpriteName: 
     EquippedInventory: []
+  EntityPosition: 1
 --- !u!212 &556870148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1497,8 +1496,6 @@ MonoBehaviour:
       Current: 50
       Maximum: 50
       Temporary: 0
-    Onesie:
-      OnHitSoundEventName: 
     SpriteType: 1
     SpriteName: Onesie/GrayCat/Cat
     EquippedInventory: []
@@ -2148,11 +2145,10 @@ MonoBehaviour:
       Current: 0
       Maximum: 0
       Temporary: 0
-    Onesie:
-      OnHitSoundEventName: 
     SpriteType: 0
     SpriteName: 
     EquippedInventory: []
+  EntityPosition: 0
 --- !u!212 &1894646677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2458,6 +2454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d26ffdb5ed6594db87d5c0dcc3975b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCombatOver: 0
   IsPlayerTurn: 1
   IsNewTurn: 1
   EnemyEntities:

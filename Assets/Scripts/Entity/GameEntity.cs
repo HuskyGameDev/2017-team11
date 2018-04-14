@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using AI;
 using Cataclysm.Resources;
 using UnityEngine;
@@ -13,14 +14,40 @@ namespace Entity {
     [RequireComponent(typeof(SpriteRenderer))]
     public class GameEntity : MonoBehaviour {
         public Entity MyEntity;
+        public EntityPosition EntityPosition;
         private SpriteRenderer _renderer;
+        private int _wCache = Screen.width, _hCache = Screen.height;
+        private Camera _camera;
 
         private void Awake() {
             _renderer = GetComponent<SpriteRenderer>();
+            _camera = Camera.main;
         }
 
         private void Start() {
             SetEntity(MyEntity);
+        }
+
+        /// <summary>
+        /// Recalculate sprite position.
+        /// </summary>
+        private void Update()
+        {
+            if (_renderer.sprite == null || Screen.width == _wCache && Screen.height == _hCache)
+                return;
+            _wCache = Screen.width;
+            _hCache = Screen.height;
+            switch (EntityPosition)
+            {
+                case EntityPosition.Enemy0:
+                    transform.position = _camera.ViewportToWorldPoint(new Vector3(0.67f, 0.67f, -_camera.gameObject.transform.position.z));
+                    break;
+                case EntityPosition.Player0:
+                    transform.position = _camera.ViewportToWorldPoint(new Vector3(0.33f, 0.33f, -_camera.gameObject.transform.position.z));
+                    break;
+                default:
+                    throw new InvalidEnumArgumentException();
+            }
         }
 
         /// <summary>
