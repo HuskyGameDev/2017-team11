@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 428396320}
   - component: {fileID: 428396319}
   m_Layer: 5
-  m_Name: Title Image
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 179d7a9eb1f6d2041960bfad9b201cf8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a662e1f1b34dc1a46bf8ae7817c859ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 1590479753}
   - component: {fileID: 1590479752}
   m_Layer: 5
-  m_Name: cat background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -969,7 +969,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9d22614442018924eadea9989a1ee0d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ca9def33837c7642b976efc47f96c3e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
