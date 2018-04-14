@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}'
-    m_lastTimePsrt1: -1912347876
-    m_lastTimePart2: -1999268047
+    m_lastTimePsrt1: -1744897462
+    m_lastTimePart2: -1999265241
     List:
     - Name: Battle_Music
       Path: Default Work Unit\Battle_Music
@@ -49,6 +49,16 @@ MonoBehaviour:
       ID: -1518252487
       Guid: 58cee7aea7dfc542839b0dbe7f6a5ab3
       maxAttenuation: 0
+    - Name: Cat_Growl_2
+      Path: Default Work Unit\Cat_Growl_2
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Growl_2
+        ObjectType: 3
+      ID: -1128103970
+      Guid: e5c50365e533dd4fb355d84f5308bd2f
+      maxAttenuation: 0
     - Name: Cat_Pain_Meow
       Path: Default Work Unit\Cat_Pain_Meow
       PathAndIcons:
@@ -69,33 +79,63 @@ MonoBehaviour:
       ID: -658912862
       Guid: 56ac9876808c1e4d9490ad1f4b74ec09
       maxAttenuation: 0
+    - Name: City_Ambience
+      Path: Default Work Unit\City_Ambience
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: City_Ambience
+        ObjectType: 3
+      ID: -1018494345
+      Guid: 39dc0481a664c944b3645dfcdd587332
+      maxAttenuation: 0
+    - Name: Defeat_Sigh
+      Path: Default Work Unit\Defeat_Sigh
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Defeat_Sigh
+        ObjectType: 3
+      ID: -820990146
+      Guid: 8eb872df1e55ca4792d7f0c675c2ef97
+      maxAttenuation: 0
+    - Name: Happy_Purrs
+      Path: Default Work Unit\Happy_Purrs
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Happy_Purrs
+        ObjectType: 3
+      ID: 88045260
+      Guid: 97397ceeb0b4754881291691f0ab7ef4
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{85C415A5-79D6-415F-ADF7-F5B1C2570998}'
-    m_lastTimePsrt1: 1388612888
-    m_lastTimePart2: -1999273678
+    m_lastTimePsrt1: -1740678620
+    m_lastTimePart2: -1999265241
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{558E473D-956F-471A-9ADA-D5F1E6A2AB8D}'
-    m_lastTimePsrt1: 1388662926
-    m_lastTimePart2: -1999273678
+    m_lastTimePsrt1: -1738022576
+    m_lastTimePart2: -1999265241
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0CEFEE58-3FB3-4295-99D3-E18E2CA0D333}'
-    m_lastTimePsrt1: 1388662926
-    m_lastTimePart2: -1999273678
+    m_lastTimePsrt1: -1738022576
+    m_lastTimePart2: -1999265241
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{93A491BE-F801-4898-B34B-D75CA871806E}'
-    m_lastTimePsrt1: -1908740498
-    m_lastTimePart2: -1999268047
+    m_lastTimePsrt1: -1738022576
+    m_lastTimePart2: -1999265241
     List:
     - Name: Cataclysm_Sound_Bank
       Path: Default Work Unit\Cataclysm_Sound_Bank
@@ -119,15 +159,15 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A34810B4-4E98-4966-B079-E65475A26855}'
-    m_lastTimePsrt1: 1388492809
-    m_lastTimePart2: -1999273678
+    m_lastTimePsrt1: -1744897462
+    m_lastTimePart2: -1999265241
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{11E77078-D815-46C6-99EA-26A5B395BF40}'
-    m_lastTimePsrt1: 1388672933
-    m_lastTimePart2: -1999273678
+    m_lastTimePsrt1: -1737866332
+    m_lastTimePart2: -1999265241
     List: []
   ExpandedItems:
   - /Cataclysm_WwiseProject
