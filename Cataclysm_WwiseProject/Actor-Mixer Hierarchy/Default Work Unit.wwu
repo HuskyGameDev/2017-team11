@@ -41,7 +41,7 @@
 						<ActiveSource Name="Fight Meow" ID="{8FC3CE2C-9433-4547-AB9F-38E013102018}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Growl 1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" ShortID="382760088">
+				<Sound Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" ShortID="382760088">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
@@ -142,7 +142,7 @@
 						<ActiveSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Growl 2" ID="{78238832-E433-4217-BB94-9572BA4EEFB2}" ShortID="808945225">
+				<Sound Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" ShortID="444423991">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
@@ -152,13 +152,32 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Growl 2" ID="{A6DD2D81-438C-4EBC-AB8C-9354B8A7ACEF}" ShortID="5578814">
+						<AudioFileSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" ShortID="795155662">
 							<Language>SFX</Language>
 							<AudioFile>Growl 2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Growl 2" ID="{A6DD2D81-438C-4EBC-AB8C-9354B8A7ACEF}" Platform="Linked"/>
+						<ActiveSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" ShortID="549703500">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" ShortID="559390341">
+							<Language>SFX</Language>
+							<AudioFile>Happy Purr.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

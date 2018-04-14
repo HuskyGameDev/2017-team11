@@ -39,7 +39,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Growl 1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+									<ObjectRef Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -99,27 +99,31 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{F27146E5-1E58-4B06-88D5-378DBC17B0C0}" ShortID="165380200">
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Growl_2" ID="{6503C5E5-33E5-4FDD-B355-D84F5308BD2F}">
+					<ChildrenList>
+						<Action Name="" ID="{DD652693-862C-41DF-97CF-671C55DA01EC}" ShortID="553915852">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Growl 2" ID="{78238832-E433-4217-BB94-9572BA4EEFB2}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+									<ObjectRef Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Cat_Growl_2" ID="{35E4590C-6019-43AC-B842-A834F826E1E3}">
+				<Event Name="Happy_Purrs" ID="{EE7C3997-B4B0-4875-8129-1691F0AB7EF4}">
 					<ChildrenList>
-						<Action Name="" ID="{9A1A4512-61E5-47FC-B35E-B26104AC0171}" ShortID="396602073">
+						<Action Name="" ID="{42D7FAA7-8436-4B8B-A5C2-A3203417294E}" ShortID="689537231">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Growl 2" ID="{78238832-E433-4217-BB94-9572BA4EEFB2}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+									<ObjectRef Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

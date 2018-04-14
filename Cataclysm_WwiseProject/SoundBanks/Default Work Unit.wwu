@@ -12,12 +12,13 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Battle_Music" ID="{81B61527-B5CD-422C-9C45-8C433E539801}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Growl" ID="{AEE7CE58-DFA7-42C5-839B-0DBE7F6A5AB3}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Cat_Growl_2" ID="{35E4590C-6019-43AC-B842-A834F826E1E3}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="City_Ambience" ID="{8104DC39-64A6-44C9-B364-5DFCDD587332}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Fight_Meow" ID="{E8236BA9-5A89-476B-95FB-C4939B9FAD94}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Defeat_Sigh" ID="{DF72B88E-551E-47CA-92D7-F0C675C2EF97}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Happy_Purrs" ID="{EE7C3997-B4B0-4875-8129-1691F0AB7EF4}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Pain_Meow" ID="{314A7934-CE62-4982-8B3A-E26DC7C29F75}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Purrs" ID="{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Cat_Growl_2" ID="{6503C5E5-33E5-4FDD-B355-D84F5308BD2F}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
