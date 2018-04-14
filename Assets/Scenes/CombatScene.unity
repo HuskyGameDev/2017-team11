@@ -1485,8 +1485,8 @@ MonoBehaviour:
       Maximum: 0
       Temporary: 0
     HitPoints:
-      Current: 1
-      Maximum: 1
+      Current: 15
+      Maximum: 15
       Temporary: 0
     CritChance:
       Current: 10
@@ -1510,6 +1510,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5d4ef8259d43cbb11db2e3b41e85c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Buttons:
+  - {fileID: 829164287}
+  - {fileID: 1091457711}
+  - {fileID: 818702223}
+  - {fileID: 928622143}
+  - {fileID: 1467325934}
+  - {fileID: 2008923474}
+  - {fileID: 786723593}
+  - {fileID: 38994115}
 --- !u!4 &1380467921
 Transform:
   m_ObjectHideFlags: 0

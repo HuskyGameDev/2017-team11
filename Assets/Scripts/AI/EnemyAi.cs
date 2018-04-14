@@ -13,13 +13,14 @@ namespace AI
         /// <summary>
         /// Enemy turn time in seconds.
         /// </summary>
-        private const float EnemyTurnTime = 3.0f;
+        private const float EnemyTurnTime = 2.0f;
         private bool _turnOver = true;
         private float _timer;
         private readonly List<Move> _moves = new List<Move>();
 
         public void BeginTurn()
         {
+            Debug.Log("Beginning enemy turn");
             _turnOver = false;
             _timer = 0.0f;
         }

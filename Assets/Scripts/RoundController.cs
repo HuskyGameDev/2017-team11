@@ -65,18 +65,18 @@ public class RoundController : MonoBehaviour
                 PlayerAi.Instance.DoneWithMoves();
             }
 
-            if (!PlayerAi.Instance.IsTurnOver())
-                return;
+            if (PlayerAi.Instance.IsTurnOver())
+            {
+                IsPlayerTurn = false;
+                IsNewTurn = true;
+            }
             
             // Check if the enemies are dead and if so, end combat.
             var allEnemiesDead = true;
             for (var i = 0; i < EnemyEntities.Length && allEnemiesDead; i += 1)
                 allEnemiesDead &= EnemyEntities[i].MyEntity.IsDead;
-            if (allEnemiesDead)
-            {
-                IsCombatOver = true;
-                _combatOverTimer = 0.0f;
-            }
+            if (!allEnemiesDead)
+                return;
         }
         else // monster turn
         {
@@ -100,21 +100,20 @@ public class RoundController : MonoBehaviour
                 EnemyAiController.DoneWithMoves();
             }
 
-            if (!EnemyAiController.IsTurnOver())
-                return;
-            
+            if (EnemyAiController.IsTurnOver())
+            {
+                IsPlayerTurn = true;
+                IsNewTurn = true;
+            }
             // Check if all players are dead and if so, end combat.
             var allPlayersDead = true;
             for (var i = 0; i < CatEntities.Length && allPlayersDead; i += 1)
                 allPlayersDead &= CatEntities[i].MyEntity.IsDead;
-            if (allPlayersDead)
-            {
-                IsCombatOver = true;
-                _combatOverTimer = 0.0f;
-            }
+            if (!allPlayersDead)
+                return;
         }
-
-        IsPlayerTurn = !IsPlayerTurn;
-        IsNewTurn = true;
+        
+        IsCombatOver = true;
+        _combatOverTimer = 0.0f;
     }
 }
