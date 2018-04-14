@@ -73,6 +73,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="City_Ambience" ID="{8104DC39-64A6-44C9-B364-5DFCDD587332}">
+					<ChildrenList>
+						<Action Name="" ID="{11475BB6-9269-4BA2-9979-EF89B2F343FC}" ShortID="901236585">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

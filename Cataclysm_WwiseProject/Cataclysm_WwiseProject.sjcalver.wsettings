@@ -3,9 +3,10 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{67B332E5-CB3C-4172-A980-728FEA27AFE4}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Husky Games\Music"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Husky Games\SFX\Backgrounds\Cityscape\Bounces"/>
 				<Property Name="Event Action List\{314A7934-CE62-4982-8B3A-E26DC7C29F75}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{8104DC39-64A6-44C9-B364-5DFCDD587332}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{81B61527-B5CD-422C-9C45-8C433E539801}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AEE7CE58-DFA7-42C5-839B-0DBE7F6A5AB3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E8236BA9-5A89-476B-95FB-C4939B9FAD94}\x64_Expand States" Type="string" Value=""/>

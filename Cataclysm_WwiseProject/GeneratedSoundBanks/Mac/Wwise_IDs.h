@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID CAT_GROWL = 2776714809U;
         static const AkUniqueID CAT_PAIN_MEOW = 775186441U;
         static const AkUniqueID CAT_PURRS = 3636054434U;
+        static const AkUniqueID CITY_AMBIENCE = 3276472951U;
     } // namespace EVENTS
 
     namespace BANKS

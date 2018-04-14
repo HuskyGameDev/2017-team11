@@ -80,6 +80,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" ShortID="939876573">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
@@ -96,6 +99,28 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Battle Music V2" ID="{B1601A3C-5AE8-4275-B247-9BC9DB875C3F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" ShortID="845543312">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" ShortID="652642085">
+							<Language>SFX</Language>
+							<AudioFile>Cityscape.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
