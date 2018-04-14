@@ -16,7 +16,7 @@ namespace Entity {
         public Entity MyEntity;
         public EntityPosition EntityPosition;
         private SpriteRenderer _renderer;
-        private int _wCache = Screen.width, _hCache = Screen.height;
+        private int _wCache, _hCache;
         private Camera _camera;
 
         private void Awake() {
@@ -75,8 +75,10 @@ namespace Entity {
             }
             
             var newSprite = SpriteCache.GetSprite(MyEntity.SpriteName);
-            if (newSprite != null)
-                _renderer.sprite = newSprite;
+            if (newSprite == null)
+                return;
+            _renderer.sprite = newSprite;
+            _wCache = 0; // force a re-position    
         }
         
         public Move GetAttackMove(byte attackIndex)
