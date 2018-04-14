@@ -22,6 +22,7 @@
 				<Event Id="775186441" Name="Cat_Pain_Meow" ObjectPath="\Events\Default Work Unit\Cat_Pain_Meow"/>
 				<Event Id="3636054434" Name="Cat_Purrs" ObjectPath="\Events\Default Work Unit\Cat_Purrs"/>
 				<Event Id="3276472951" Name="City_Ambience" ObjectPath="\Events\Default Work Unit\City_Ambience"/>
+				<Event Id="3473977150" Name="Defeat_Sigh" ObjectPath="\Events\Default Work Unit\Defeat_Sigh"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="11583260" Language="SFX">
@@ -31,6 +32,10 @@
 				<File Id="74126020" Language="SFX">
 					<ShortName>Cries of Pain 2.wav</ShortName>
 					<Path>SFX\Cries of Pain 2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="84381778" Language="SFX">
+					<ShortName>Defeat Sigh.wav</ShortName>
+					<Path>SFX\Defeat Sigh_1C9C67B2.wem</Path>
 				</File>
 				<File Id="573551727" Language="SFX">
 					<ShortName>Purrs 1.wav</ShortName>
