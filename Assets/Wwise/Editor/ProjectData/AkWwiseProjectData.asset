@@ -11,42 +11,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0a2a20d88ae614abe0a73277dde8e0, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: 
+  CurrentPluginConfig: Debug
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}'
-    m_lastTimePsrt1: 911611764
-    m_lastTimePart2: -1999269245
-    List: []
+    m_lastTimePsrt1: -1912347876
+    m_lastTimePart2: -1999268047
+    List:
+    - Name: Battle_Music
+      Path: Default Work Unit\Battle_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Battle_Music
+        ObjectType: 3
+      ID: -462951265
+      Guid: 2715b681cdb52c429c458c433e539801
+      maxAttenuation: 0
+    - Name: Cat_Fight_Meow
+      Path: Default Work Unit\Cat_Fight_Meow
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Fight_Meow
+        ObjectType: 3
+      ID: 261597827
+      Guid: a96b23e8895a6b4795fbc4939b9fad94
+      maxAttenuation: 0
+    - Name: Cat_Growl
+      Path: Default Work Unit\Cat_Growl
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Growl
+        ObjectType: 3
+      ID: -1518252487
+      Guid: 58cee7aea7dfc542839b0dbe7f6a5ab3
+      maxAttenuation: 0
+    - Name: Cat_Pain_Meow
+      Path: Default Work Unit\Cat_Pain_Meow
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Pain_Meow
+        ObjectType: 3
+      ID: 775186441
+      Guid: 34794a3162ce82498b3ae26dc7c29f75
+      maxAttenuation: 0
+    - Name: Cat_Purrs
+      Path: Default Work Unit\Cat_Purrs
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cat_Purrs
+        ObjectType: 3
+      ID: -658912862
+      Guid: 56ac9876808c1e4d9490ad1f4b74ec09
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{85C415A5-79D6-415F-ADF7-F5B1C2570998}'
-    m_lastTimePsrt1: 911800478
-    m_lastTimePart2: -1999269245
+    m_lastTimePsrt1: 1388612888
+    m_lastTimePart2: -1999273678
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{558E473D-956F-471A-9ADA-D5F1E6A2AB8D}'
-    m_lastTimePsrt1: 911875358
-    m_lastTimePart2: -1999269245
+    m_lastTimePsrt1: 1388662926
+    m_lastTimePart2: -1999273678
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0CEFEE58-3FB3-4295-99D3-E18E2CA0D333}'
-    m_lastTimePsrt1: 911880367
-    m_lastTimePart2: -1999269245
+    m_lastTimePsrt1: 1388662926
+    m_lastTimePart2: -1999273678
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{93A491BE-F801-4898-B34B-D75CA871806E}'
-    m_lastTimePsrt1: 911850295
-    m_lastTimePart2: -1999269245
+    m_lastTimePsrt1: -1908740498
+    m_lastTimePart2: -1999268047
     List:
+    - Name: Cataclysm_Sound_Bank
+      Path: Default Work Unit\Cataclysm_Sound_Bank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Cataclysm_Sound_Bank
+        ObjectType: 7
+      ID: 1339736059
+      Guid: aab67eb328270446853b9a1b7b7445fd
     - Name: PrimarySoundBank
       Path: Default Work Unit\PrimarySoundBank
       PathAndIcons:
@@ -60,18 +119,22 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A34810B4-4E98-4966-B079-E65475A26855}'
-    m_lastTimePsrt1: 911621807
-    m_lastTimePart2: -1999269245
+    m_lastTimePsrt1: 1388492809
+    m_lastTimePart2: -1999273678
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{11E77078-D815-46C6-99EA-26A5B395BF40}'
-    m_lastTimePsrt1: 911890398
-    m_lastTimePart2: -1999269245
+    m_lastTimePsrt1: 1388672933
+    m_lastTimePart2: -1999273678
     List: []
   ExpandedItems:
   - /Cataclysm_WwiseProject
+  - /Cataclysm_WwiseProject/Events
+  - /Cataclysm_WwiseProject/Events/Default Work Unit
+  - /Cataclysm_WwiseProject/SoundBanks
+  - /Cataclysm_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
