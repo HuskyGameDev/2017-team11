@@ -3,12 +3,17 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{67B332E5-CB3C-4172-A980-728FEA27AFE4}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Husky Games\Music"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Husky Games\SFX\Purrs"/>
 				<Property Name="Event Action List\{314A7934-CE62-4982-8B3A-E26DC7C29F75}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{35E4590C-6019-43AC-B842-A834F826E1E3}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6503C5E5-33E5-4FDD-B355-D84F5308BD2F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{8104DC39-64A6-44C9-B364-5DFCDD587332}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{81B61527-B5CD-422C-9C45-8C433E539801}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AEE7CE58-DFA7-42C5-839B-0DBE7F6A5AB3}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{DF72B88E-551E-47CA-92D7-F0C675C2EF97}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E8236BA9-5A89-476B-95FB-C4939B9FAD94}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{EE7C3997-B4B0-4875-8129-1691F0AB7EF4}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>

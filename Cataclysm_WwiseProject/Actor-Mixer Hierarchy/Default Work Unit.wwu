@@ -41,7 +41,7 @@
 						<ActiveSource Name="Fight Meow" ID="{8FC3CE2C-9433-4547-AB9F-38E013102018}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Growl 1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" ShortID="382760088">
+				<Sound Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" ShortID="382760088">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
@@ -80,6 +80,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" ShortID="939876573">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
@@ -96,6 +99,85 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Battle Music V2" ID="{B1601A3C-5AE8-4275-B247-9BC9DB875C3F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" ShortID="845543312">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" ShortID="652642085">
+							<Language>SFX</Language>
+							<AudioFile>Cityscape.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Defeat Sigh" ID="{F0B8D564-B05A-40AC-A81F-7E8444D778CD}" ShortID="910114997">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" ShortID="84381778">
+							<Language>SFX</Language>
+							<AudioFile>Defeat Sigh.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" ShortID="444423991">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" ShortID="795155662">
+							<Language>SFX</Language>
+							<AudioFile>Growl 2.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" ShortID="549703500">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" ShortID="559390341">
+							<Language>SFX</Language>
+							<AudioFile>Happy Purr.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

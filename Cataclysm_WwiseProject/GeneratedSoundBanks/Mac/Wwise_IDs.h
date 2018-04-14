@@ -16,8 +16,12 @@ namespace AK
         static const AkUniqueID BATTLE_MUSIC = 3832016031U;
         static const AkUniqueID CAT_FIGHT_MEOW = 261597827U;
         static const AkUniqueID CAT_GROWL = 2776714809U;
+        static const AkUniqueID CAT_GROWL_2 = 3166863326U;
         static const AkUniqueID CAT_PAIN_MEOW = 775186441U;
         static const AkUniqueID CAT_PURRS = 3636054434U;
+        static const AkUniqueID CITY_AMBIENCE = 3276472951U;
+        static const AkUniqueID DEFEAT_SIGH = 3473977150U;
+        static const AkUniqueID HAPPY_PURRS = 88045260U;
     } // namespace EVENTS
 
     namespace BANKS

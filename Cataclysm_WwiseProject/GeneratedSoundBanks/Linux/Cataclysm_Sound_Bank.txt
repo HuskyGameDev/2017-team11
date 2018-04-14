@@ -1,14 +1,22 @@
 Event	ID	Name			Wwise Object Path	Notes
+	88045260	Happy_Purrs			\Default Work Unit\Happy_Purrs	
 	261597827	Cat_Fight_Meow			\Default Work Unit\Cat_Fight_Meow	
 	775186441	Cat_Pain_Meow			\Default Work Unit\Cat_Pain_Meow	
 	2776714809	Cat_Growl			\Default Work Unit\Cat_Growl	
+	3166863326	Cat_Growl_2			\Default Work Unit\Cat_Growl_2	
+	3276472951	City_Ambience			\Default Work Unit\City_Ambience	
+	3473977150	Defeat_Sigh			\Default Work Unit\Defeat_Sigh	
 	3636054434	Cat_Purrs			\Default Work Unit\Cat_Purrs	
 	3832016031	Battle_Music			\Default Work Unit\Battle_Music	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	11583260	Battle Music V2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Battle Music V2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Battle Music V2		4838544
+	11583260	Battle Music V2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Battle Music V2_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Battle Music V2		4838544
 	74126020	Cries of Pain 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Cries of Pain 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cries of Pain 2		172920
+	84381778	Defeat Sigh	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Defeat Sigh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Defeat Sigh		617544
+	559390341	Happy Purr	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Happy Purr_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Happy Purr		264744
 	573551727	Purrs	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Purrs 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Purrs		4406520
 	640818936	Fight Meow	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Fight Meow_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fight Meow		172920
-	653191822	Growl 1	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Growl 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl 1		264792
+	652642085	Cityscape	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Cityscape_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cityscape		14817744
+	653191822	Growl_1	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Growl 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl_1		264792
+	795155662	Growl 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Linux\SFX\Growl 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl 2		419140
 

@@ -19,17 +19,29 @@
 				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music"/>
 				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat_Fight_Meow"/>
 				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat_Growl"/>
+				<Event Id="3166863326" Name="Cat_Growl_2" ObjectPath="\Events\Default Work Unit\Cat_Growl_2"/>
 				<Event Id="775186441" Name="Cat_Pain_Meow" ObjectPath="\Events\Default Work Unit\Cat_Pain_Meow"/>
 				<Event Id="3636054434" Name="Cat_Purrs" ObjectPath="\Events\Default Work Unit\Cat_Purrs"/>
+				<Event Id="3276472951" Name="City_Ambience" ObjectPath="\Events\Default Work Unit\City_Ambience"/>
+				<Event Id="3473977150" Name="Defeat_Sigh" ObjectPath="\Events\Default Work Unit\Defeat_Sigh"/>
+				<Event Id="88045260" Name="Happy_Purrs" ObjectPath="\Events\Default Work Unit\Happy_Purrs"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="11583260" Language="SFX">
 					<ShortName>Battle Music V2.wav</ShortName>
-					<Path>SFX\Battle Music V2_1C9C67B2.wem</Path>
+					<Path>SFX\Battle Music V2_F17FB28C.wem</Path>
 				</File>
 				<File Id="74126020" Language="SFX">
 					<ShortName>Cries of Pain 2.wav</ShortName>
 					<Path>SFX\Cries of Pain 2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="84381778" Language="SFX">
+					<ShortName>Defeat Sigh.wav</ShortName>
+					<Path>SFX\Defeat Sigh_1C9C67B2.wem</Path>
+				</File>
+				<File Id="559390341" Language="SFX">
+					<ShortName>Happy Purr.wav</ShortName>
+					<Path>SFX\Happy Purr_1C9C67B2.wem</Path>
 				</File>
 				<File Id="573551727" Language="SFX">
 					<ShortName>Purrs 1.wav</ShortName>
@@ -39,9 +51,17 @@
 					<ShortName>Fight Meow.wav</ShortName>
 					<Path>SFX\Fight Meow_1C9C67B2.wem</Path>
 				</File>
+				<File Id="652642085" Language="SFX">
+					<ShortName>Cityscape.wav</ShortName>
+					<Path>SFX\Cityscape_F17FB28C.wem</Path>
+				</File>
 				<File Id="653191822" Language="SFX">
 					<ShortName>Growl 1.wav</ShortName>
 					<Path>SFX\Growl 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="795155662" Language="SFX">
+					<ShortName>Growl 2.wav</ShortName>
+					<Path>SFX\Growl 2_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
