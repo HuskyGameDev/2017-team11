@@ -23,6 +23,9 @@ namespace Entity {
             SetEntity(MyEntity);
         }
 
+        /// <summary>
+        /// Let the entity know its game object doesn't exist anymore.
+        /// </summary>
         private void OnDestroy()
         {
             if (MyEntity != null)
@@ -38,7 +41,15 @@ namespace Entity {
 
         public void RefreshSprite()
         {
-            _renderer.sprite = MyEntity == null ? null : SpriteCache.GetSprite(MyEntity.SpriteName);
+            if (MyEntity == null)
+            {
+                _renderer.sprite = null;
+                return;
+            }
+            
+            var newSprite = SpriteCache.GetSprite(MyEntity.SpriteName);
+            if (newSprite != null)
+                _renderer.sprite = newSprite;
         }
         
         public Move GetAttackMove(byte attackIndex)

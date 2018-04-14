@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Action;
 using Cataclysm.Resources;
 using Inventory;
+using NUnit.Framework;
 using Registry;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -266,6 +267,12 @@ namespace Entity {
                 if (damage <= 0)
                     return;
                 HitPoints.Damage(damage);
+                if (IsDead)
+                {
+                    SpriteName = $"Onesie/{SpriteType}/{Onesie.BaseSpriteName}_Dead";
+                    if(GameEntity != null)
+                        GameEntity.RefreshSprite();
+                }
                 if(GameEntity == null)
                     return;
                 if(Onesie.OnHitSoundEventName == null)

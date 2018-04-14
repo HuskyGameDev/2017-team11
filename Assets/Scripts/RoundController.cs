@@ -14,11 +14,14 @@ public class RoundController : MonoBehaviour
 {
     public static RoundController Instance;
 
+    public bool IsCombatOver; // = false
     public bool IsPlayerTurn = true;
     public bool IsNewTurn = true;
     public GameEntity[] EnemyEntities;
     public GameEntity[] CatEntities;
     public IEntityTurnController EnemyAiController;
+
+    private float _combatOverTimer;
 
     private void Awake() => Instance = this;
     private void OnDestroy() => Instance = null;
@@ -33,10 +36,18 @@ public class RoundController : MonoBehaviour
 
     private void Update()
     {
+        if (IsCombatOver)
+        {
+            _combatOverTimer += Time.deltaTime;
+            if(_combatOverTimer > 10.0f)
+                Application.Quit();
+            return;
+        }
         if (IsPlayerTurn)
         {
             if (IsNewTurn)
             {
+                // ReSharper disable once ForCanBeConvertedToForeach
                 for (var i = 0; i < PlayerController.Instance.Cats.Count; i++)
                     // tick effects on each cat.
                     PlayerController.Instance.Cats[i].ProcessEffects();
@@ -56,11 +67,22 @@ public class RoundController : MonoBehaviour
 
             if (!PlayerAi.Instance.IsTurnOver())
                 return;
+            
+            // Check if the enemies are dead and if so, end combat.
+            var allEnemiesDead = true;
+            for (var i = 0; i < EnemyEntities.Length && allEnemiesDead; i += 1)
+                allEnemiesDead &= EnemyEntities[i].MyEntity.IsDead;
+            if (allEnemiesDead)
+            {
+                IsCombatOver = true;
+                _combatOverTimer = 0.0f;
+            }
         }
         else // monster turn
         {
             if (IsNewTurn)
             {
+                // ReSharper disable once ForCanBeConvertedToForeach
                 for (var i = 0; i < EnemyEntities.Length; i++)
                     // tick effects on each monster.
                     EnemyEntities[i].MyEntity.ProcessEffects();
@@ -80,6 +102,16 @@ public class RoundController : MonoBehaviour
 
             if (!EnemyAiController.IsTurnOver())
                 return;
+            
+            // Check if all players are dead and if so, end combat.
+            var allPlayersDead = true;
+            for (var i = 0; i < CatEntities.Length && allPlayersDead; i += 1)
+                allPlayersDead &= CatEntities[i].MyEntity.IsDead;
+            if (allPlayersDead)
+            {
+                IsCombatOver = true;
+                _combatOverTimer = 0.0f;
+            }
         }
 
         IsPlayerTurn = !IsPlayerTurn;
