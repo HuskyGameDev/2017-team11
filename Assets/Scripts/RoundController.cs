@@ -28,7 +28,7 @@ public class RoundController : MonoBehaviour
         EnemyAiController = GetComponent<EnemyAi>();
         EnemyEntities[0].SetEntity(MonsterRegistry.GetRandomMonsterEntity(Region.City, Rarity.Common));
         CatEntities[0].SetEntity(PlayerController.Instance.Cats[0]);
-        AkSoundEngine.PostEvent("Battle_Music", gameObject);
+        //AkSoundEngine.PostEvent("Battle_Music", gameObject);
     }
 
     private void Update()

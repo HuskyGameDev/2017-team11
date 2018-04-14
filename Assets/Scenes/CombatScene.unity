@@ -262,39 +262,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyEntity:
+    GameEntity: {fileID: 0}
     MentalResist:
       Current: 0
-      Maximum: 1
+      Maximum: 0
       Temporary: 0
     Armor:
-      Current: 1
-      Maximum: 1
+      Current: 0
+      Maximum: 0
       Temporary: 0
     PoisonResist:
       Current: 0
       Maximum: 0
       Temporary: 0
     HitPoints:
-      Current: 10
-      Maximum: 10
+      Current: 0
+      Maximum: 0
       Temporary: 0
     CritChance:
-      Current: 10
-      Maximum: 10
+      Current: 0
+      Maximum: 0
       Temporary: 0
     CritDamage:
-      Current: 50
-      Maximum: 50
+      Current: 0
+      Maximum: 0
       Temporary: 0
     Onesie:
-      SpriteName: 
-      HitPointsMod: 0
-      ArmorMod: 0
-      PoisonResistMod: 0
-      MentalResistMod: 0
-      CritChance: 0
-      CritDamage: 0
       OnHitSoundEventName: 
+    SpriteType: 0
+    SpriteName: 
     EquippedInventory: []
 --- !u!212 &556870148
 SpriteRenderer:
@@ -1476,7 +1472,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cats:
-  - MentalResist:
+  - GameEntity: {fileID: 0}
+    MentalResist:
       Current: 0
       Maximum: 0
       Temporary: 0
@@ -1501,14 +1498,9 @@ MonoBehaviour:
       Maximum: 50
       Temporary: 0
     Onesie:
-      SpriteName: 
-      HitPointsMod: 0
-      ArmorMod: 0
-      PoisonResistMod: 0
-      MentalResistMod: 0
-      CritChance: 0
-      CritDamage: 0
       OnHitSoundEventName: 
+    SpriteType: 1
+    SpriteName: Onesie/GrayCat/Cat
     EquippedInventory: []
 --- !u!114 &1380467920
 MonoBehaviour:
@@ -2131,39 +2123,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyEntity:
+    GameEntity: {fileID: 0}
     MentalResist:
       Current: 0
-      Maximum: 1
+      Maximum: 0
       Temporary: 0
     Armor:
-      Current: 1
-      Maximum: 1
+      Current: 0
+      Maximum: 0
       Temporary: 0
     PoisonResist:
       Current: 0
       Maximum: 0
       Temporary: 0
     HitPoints:
-      Current: 10
-      Maximum: 10
+      Current: 0
+      Maximum: 0
       Temporary: 0
     CritChance:
-      Current: 10
-      Maximum: 10
+      Current: 0
+      Maximum: 0
       Temporary: 0
     CritDamage:
-      Current: 50
-      Maximum: 50
+      Current: 0
+      Maximum: 0
       Temporary: 0
     Onesie:
-      SpriteName: 
-      HitPointsMod: 0
-      ArmorMod: 0
-      PoisonResistMod: 0
-      MentalResistMod: 0
-      CritChance: 0
-      CritDamage: 0
       OnHitSoundEventName: 
+    SpriteType: 0
+    SpriteName: 
     EquippedInventory: []
 --- !u!212 &1894646677
 SpriteRenderer:

@@ -7,6 +7,7 @@
     {
         Monster = 0,
         GrayCat = 1,
-        CreamCat = 2
+        CreamCat = 2,
+        PuddleCat = 3
     }
 }

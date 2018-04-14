@@ -38,7 +38,7 @@ namespace Entity {
 
         public void RefreshSprite()
         {
-            _renderer.sprite = MyEntity == null ? null : SpriteCache.GetSprite(MyEntity.Onesie.SpriteName);
+            _renderer.sprite = MyEntity == null ? null : SpriteCache.GetSprite(MyEntity.SpriteName);
         }
         
         public Move GetAttackMove(byte attackIndex)

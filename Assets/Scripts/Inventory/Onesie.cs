@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Action;
-using Cataclysm.Resources;
-using UnityEngine;
 
 namespace Inventory {
     [Serializable]
     public class Onesie: Item {
-        private readonly string _baseName;
-        public string SpriteName;
+        public readonly string BaseSpriteName;
         
         public readonly int HitPointsMod;
         public readonly int ArmorMod;
@@ -17,7 +14,7 @@ namespace Inventory {
         public readonly int CritChance;
         public readonly int CritDamage;
 
-        public string OnHitSoundEventName = null;
+        public readonly string OnHitSoundEventName;
 
         public readonly Attack[] Attacks;
 
@@ -31,9 +28,10 @@ namespace Inventory {
         // ReSharper disable once CollectionNeverUpdated.Global
         public readonly Dictionary<ActionType, float> EffectModifiers = new Dictionary<ActionType, float>();
 
-        public Onesie(string baseName, Attack[] attacks, int hitPointsMod = 0, int armorMod = 0, int poisonResistMod = 0, int mentalResistMod = 0, int critChanceMod = 0, int critDamageMod = 0)
+        public Onesie(string baseName, Attack[] attacks, int hitPointsMod = 0, int armorMod = 0, int poisonResistMod = 0,
+            int mentalResistMod = 0, int critChanceMod = 0, int critDamageMod = 0, string onHitSoundEventName = null)
         {
-            _baseName = baseName;
+            BaseSpriteName = baseName;
             if (attacks == null)
                 throw new ArgumentNullException(nameof(attacks), "Attacks array is null.");
             if (attacks.Length != 4)
@@ -45,12 +43,7 @@ namespace Inventory {
             MentalResistMod = mentalResistMod;
             CritChance = critChanceMod;
             CritDamage = critDamageMod;
-        }
-
-        public void SetSpriteName(SpriteType spriteType)
-        {
-            SpriteName = $"Onesie/{spriteType}/{_baseName}";
-            Debug.Log($"Set sprite name to \"{SpriteName}\"");
+            OnHitSoundEventName = onHitSoundEventName;
         }
     }
 }

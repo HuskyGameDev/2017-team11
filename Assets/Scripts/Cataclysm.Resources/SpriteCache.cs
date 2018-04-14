@@ -2,16 +2,20 @@
 using UnityEngine;
 
 namespace Cataclysm.Resources {
+    /// <summary>
+    /// Caches sprites and wraps resource loading.
+    /// </summary>
     public static class SpriteCache {
-        private static readonly Dictionary<string, Sprite> cache = new Dictionary<string, Sprite>();
+        private static readonly Dictionary<string, Sprite> Cache = new Dictionary<string, Sprite>();
+        /// <summary>
+        /// Loads a new or cached sprite.
+        /// </summary>
+        /// <param name="name">Name of the sprite</param>
+        /// <returns>A sprite</returns>
         public static Sprite GetSprite(string name) {
-            Debug.Log($"Looking for sprite {name}...");
-            if(!cache.ContainsKey(name)) {
-                cache[name] = UnityEngine.Resources.Load<Sprite>(name);
-                Debug.Log($"Loaded sprite for {name}");
-            }
-
-            return cache[name];
+            if (!Cache.ContainsKey(name))
+                Cache[name] = UnityEngine.Resources.Load<Sprite>(name);
+            return Cache[name];
         }
     }
 }

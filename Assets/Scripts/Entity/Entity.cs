@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Action;
 using Cataclysm.Resources;
 using Inventory;
+using Registry;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -41,6 +42,7 @@ namespace Entity {
         /// </summary>
         public Onesie Onesie;
         public SpriteType SpriteType;
+        public string SpriteName;
         
         /// <summary>
         /// Equipped items: probably just onesies TODO
@@ -74,7 +76,9 @@ namespace Entity {
                 CritChance.Current = CritChance.Temporary + CritChance.Maximum;
                 CritDamage.Current = CritChance.Temporary + CritChance.Maximum;
             }
-            Onesie.SetSpriteName(SpriteType);
+
+            SpriteName = $"Onesie/{SpriteType}/{Onesie.BaseSpriteName}";
+            Debug.Log($"Generated sprite name \"{SpriteName}\"");
             if(GameEntity != null)
                 GameEntity.RefreshSprite();
             
@@ -110,7 +114,9 @@ namespace Entity {
         /// Checks if the entity has an effect on them currently.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool HasEffect(ActionType type) {return Effects.ContainsKey(type);}
+        public bool HasEffect(ActionType type) {
+            return Effects.ContainsKey(type);
+        }
 
         /// <summary>
         /// Applies physical damage and inserts/updates effects into the list/dictionary.
@@ -257,31 +263,42 @@ namespace Entity {
                 if (damage > 0)
                 {
                     HitPoints.Damage(damage);
-                    if(Onesie.OnHitSoundEventName != null)
-                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, RoundController.Instance.CatEntities[0].gameObject);
+                    if (Onesie.OnHitSoundEventName != null && GameEntity != null)
+                    {
+                        Debug.Log($"Posting event: {Onesie.OnHitSoundEventName}");
+                        AkSoundEngine.PostEvent(Onesie.OnHitSoundEventName, GameEntity.gameObject);
+                    }
                 }
             }
         }
         #endregion
 
+        /// <summary>
+        /// Clones the entity; for use with the MonsterRegistry, so a fresh monster is fought every time.
+        /// </summary>
+        /// <returns>A partially deep copy of the Entity.</returns>
         public Entity Clone()
         {
-            var @new = new Entity();
-            @new.MentalResist = new Attribute(MentalResist.Current, MentalResist.Maximum, MentalResist.Temporary);
-            @new.Armor = new Attribute(Armor.Current, Armor.Maximum, Armor.Temporary);
-            @new.PoisonResist = new Attribute(PoisonResist.Current, PoisonResist.Maximum, PoisonResist.Temporary);
-            @new.HitPoints = new Attribute(HitPoints.Current, HitPoints.Maximum, HitPoints.Temporary);
-            @new.CritChance = new Attribute(CritChance.Current, CritChance.Maximum, CritChance.Temporary);
-            @new.CritDamage = new Attribute(CritChance.Current, CritChance.Maximum, CritChance.Temporary);
-            @new.Onesie = Onesie;
-            @new.EquippedInventory = new List<Item>(EquippedInventory);
+            var @new = new Entity
+            {
+                MentalResist = new Attribute(MentalResist.Current, MentalResist.Maximum, MentalResist.Temporary),
+                Armor = new Attribute(Armor.Current, Armor.Maximum, Armor.Temporary),
+                PoisonResist = new Attribute(PoisonResist.Current, PoisonResist.Maximum, PoisonResist.Temporary),
+                HitPoints = new Attribute(HitPoints.Current, HitPoints.Maximum, HitPoints.Temporary),
+                CritChance = new Attribute(CritChance.Current, CritChance.Maximum, CritChance.Temporary),
+                CritDamage = new Attribute(CritChance.Current, CritChance.Maximum, CritChance.Temporary),
+                Onesie = Onesie,
+                SpriteType = SpriteType,
+                SpriteName = SpriteName,
+                EquippedInventory = new List<Item>(EquippedInventory)
+            };
             @new.EffectList.AddRange(EffectList);
             foreach(var key in EffectModifiers.Keys)
                 @new.EffectModifiers[key] = EffectModifiers[key];
-            foreach(var key in Effects.Keys)
-                @new.Effects[key] = new List<int>(Effects[key]);
             foreach(var key in Immunities)
                 @new.Immunities.Add(key);
+            foreach(var key in Effects.Keys)
+                @new.Effects[key] = new List<int>(Effects[key]);
             return @new;
         }
 
