@@ -3,188 +3,204 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Cat_Purrs" ID="{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}">
+				<Folder Name="Cat Sounds" ID="{7C13F96F-948F-410D-9F38-8BC4B2717292}" ShortID="279716153">
 					<ChildrenList>
-						<Action Name="" ID="{666EA0B4-C580-485A-99DC-11EF4139E99B}" ShortID="404630605">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Purrs" ID="{D683DFE3-03F6-4496-AF3C-B39FE379EED3}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Cat_Fight_Meow" ID="{E8236BA9-5A89-476B-95FB-C4939B9FAD94}">
+							<ChildrenList>
+								<Action Name="" ID="{8217ACC7-C9F9-40C7-9E97-4422606BD14C}" ShortID="1031117032">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fight Meow" ID="{A0AECE0E-8FE6-478A-9AB0-579262B08F1D}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Cat_Growl" ID="{AEE7CE58-DFA7-42C5-839B-0DBE7F6A5AB3}">
+							<ChildrenList>
+								<Action Name="" ID="{6B24664F-EA74-4123-9AF0-76BBF1F999B2}" ShortID="81576578">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Cat_Growl_2" ID="{6503C5E5-33E5-4FDD-B355-D84F5308BD2F}">
+							<ChildrenList>
+								<Action Name="" ID="{DD652693-862C-41DF-97CF-671C55DA01EC}" ShortID="553915852">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Cat_Pain_Meow" ID="{314A7934-CE62-4982-8B3A-E26DC7C29F75}">
+							<ChildrenList>
+								<Action Name="" ID="{82B7F569-9EB7-4747-A08E-83A373E7AF49}" ShortID="68897455">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cries of Pain 2" ID="{3C5F06F8-66FD-4060-AF19-7196511B3C1B}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Cat_Purrs" ID="{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}">
+							<ChildrenList>
+								<Action Name="" ID="{666EA0B4-C580-485A-99DC-11EF4139E99B}" ShortID="404630605">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Purrs" ID="{D683DFE3-03F6-4496-AF3C-B39FE379EED3}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Defeat_Sigh" ID="{DF72B88E-551E-47CA-92D7-F0C675C2EF97}">
+							<ChildrenList>
+								<Action Name="" ID="{C48D950F-53B3-4CC8-9D3B-8D4EE1829377}" ShortID="999196655">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defeat Sigh" ID="{F0B8D564-B05A-40AC-A81F-7E8444D778CD}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Happy_Purrs" ID="{EE7C3997-B4B0-4875-8129-1691F0AB7EF4}">
+							<ChildrenList>
+								<Action Name="" ID="{42D7FAA7-8436-4B8B-A5C2-A3203417294E}" ShortID="689537231">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Cat_Fight_Meow" ID="{E8236BA9-5A89-476B-95FB-C4939B9FAD94}">
+				</Folder>
+				<Folder Name="Music" ID="{09EB1283-F1CA-4801-A1B4-85D350C71DA7}" ShortID="85961715">
 					<ChildrenList>
-						<Action Name="" ID="{8217ACC7-C9F9-40C7-9E97-4422606BD14C}" ShortID="1031117032">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Fight Meow" ID="{A0AECE0E-8FE6-478A-9AB0-579262B08F1D}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Battle_Music" ID="{81B61527-B5CD-422C-9C45-8C433E539801}">
+							<ChildrenList>
+								<Action Name="" ID="{36190E6F-2BCB-40A8-AA2A-076635D737A0}" ShortID="852230036">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Cat_Growl" ID="{AEE7CE58-DFA7-42C5-839B-0DBE7F6A5AB3}">
+				</Folder>
+				<Folder Name="Monster Sounds" ID="{D5F4F868-FD83-4B31-A976-5FC940BC4F62}" ShortID="1035364017">
 					<ChildrenList>
-						<Action Name="" ID="{6B24664F-EA74-4123-9AF0-76BBF1F999B2}" ShortID="81576578">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Box_Monster_Growl" ID="{BD80D5ED-BB43-4982-ACB2-E1427847905A}">
+							<ChildrenList>
+								<Action Name="" ID="{0863D9C3-6E18-40F5-BE83-33A9C2E1407C}" ShortID="546102918">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Box Monster Growl" ID="{B724F851-7BE1-4256-9744-22BC7A2E0421}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Box_Monster_Growl_Long" ID="{F4BEC93C-1642-4768-937A-0BA4F80F4F44}">
+							<ChildrenList>
+								<Action Name="" ID="{BA13C554-2368-40C3-869F-9AEB3925D70E}" ShortID="504482894">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Box Monster Growl 3" ID="{7D3EBC45-C431-4337-A940-04E390BE00BB}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Box_Monster_Growl_Short" ID="{5FF64D74-118A-45FC-B66B-F1F620977039}">
+							<ChildrenList>
+								<Action Name="" ID="{1F759D91-835A-4466-AE24-66627DAE9916}" ShortID="753914030">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Box Monster Growl 2" ID="{DFEC2F02-22FE-4DE9-B9FD-A599C14EB714}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Box_Monster_Hurt" ID="{042B1E30-B1EE-4CF7-B188-6DBB6C2B658E}">
+							<ChildrenList>
+								<Action Name="" ID="{C04973BF-4308-4CB7-A377-88946AF844AA}" ShortID="536730440">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Box Monster Hit Hurt" ID="{A1BB8AB6-D825-47C0-B808-FB1F1224D9C7}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Cat_Pain_Meow" ID="{314A7934-CE62-4982-8B3A-E26DC7C29F75}">
+				</Folder>
+				<Folder Name="Ambiences" ID="{32A7E8D1-5083-4522-A1B7-4DFE63DBE850}" ShortID="9417224">
 					<ChildrenList>
-						<Action Name="" ID="{82B7F569-9EB7-4747-A08E-83A373E7AF49}" ShortID="68897455">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cries of Pain 2" ID="{3C5F06F8-66FD-4060-AF19-7196511B3C1B}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="City_Ambience" ID="{8104DC39-64A6-44C9-B364-5DFCDD587332}">
+							<ChildrenList>
+								<Action Name="" ID="{11475BB6-9269-4BA2-9979-EF89B2F343FC}" ShortID="901236585">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Battle_Music" ID="{81B61527-B5CD-422C-9C45-8C433E539801}">
-					<ChildrenList>
-						<Action Name="" ID="{36190E6F-2BCB-40A8-AA2A-076635D737A0}" ShortID="852230036">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="City_Ambience" ID="{8104DC39-64A6-44C9-B364-5DFCDD587332}">
-					<ChildrenList>
-						<Action Name="" ID="{11475BB6-9269-4BA2-9979-EF89B2F343FC}" ShortID="901236585">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Defeat_Sigh" ID="{DF72B88E-551E-47CA-92D7-F0C675C2EF97}">
-					<ChildrenList>
-						<Action Name="" ID="{C48D950F-53B3-4CC8-9D3B-8D4EE1829377}" ShortID="999196655">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Defeat Sigh" ID="{F0B8D564-B05A-40AC-A81F-7E8444D778CD}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Cat_Growl_2" ID="{6503C5E5-33E5-4FDD-B355-D84F5308BD2F}">
-					<ChildrenList>
-						<Action Name="" ID="{DD652693-862C-41DF-97CF-671C55DA01EC}" ShortID="553915852">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Happy_Purrs" ID="{EE7C3997-B4B0-4875-8129-1691F0AB7EF4}">
-					<ChildrenList>
-						<Action Name="" ID="{42D7FAA7-8436-4B8B-A5C2-A3203417294E}" ShortID="689537231">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Box_Monster_Growl" ID="{BD80D5ED-BB43-4982-ACB2-E1427847905A}">
-					<ChildrenList>
-						<Action Name="" ID="{0863D9C3-6E18-40F5-BE83-33A9C2E1407C}" ShortID="546102918">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Box Monster Growl" ID="{B724F851-7BE1-4256-9744-22BC7A2E0421}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Box_Monster_Growl_Short" ID="{5FF64D74-118A-45FC-B66B-F1F620977039}">
-					<ChildrenList>
-						<Action Name="" ID="{1F759D91-835A-4466-AE24-66627DAE9916}" ShortID="753914030">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Box Monster Growl 2" ID="{DFEC2F02-22FE-4DE9-B9FD-A599C14EB714}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Box_Monster_Growl_Long" ID="{F4BEC93C-1642-4768-937A-0BA4F80F4F44}">
-					<ChildrenList>
-						<Action Name="" ID="{BA13C554-2368-40C3-869F-9AEB3925D70E}" ShortID="504482894">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Box Monster Growl 3" ID="{7D3EBC45-C431-4337-A940-04E390BE00BB}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Box_Monster_Hurt" ID="{042B1E30-B1EE-4CF7-B188-6DBB6C2B658E}">
-					<ChildrenList>
-						<Action Name="" ID="{C04973BF-4308-4CB7-A377-88946AF844AA}" ShortID="536730440">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Box Monster Hit Hurt" ID="{A1BB8AB6-D825-47C0-B808-FB1F1224D9C7}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -3,259 +3,275 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Purrs" ID="{D683DFE3-03F6-4496-AF3C-B39FE379EED3}" ShortID="318513775">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Cat Sounds" ID="{6E1DB322-EC4C-4618-8F6B-C1156C50B327}" ShortID="257815278">
 					<ChildrenList>
-						<AudioFileSource Name="Purrs 1" ID="{49E80195-EE17-4E3B-A7B5-B4994020AD8C}" ShortID="573551727">
-							<Language>SFX</Language>
-							<AudioFile>Purrs 1.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="Fight Meow" ID="{A0AECE0E-8FE6-478A-9AB0-579262B08F1D}" ShortID="489783593">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fight Meow" ID="{8FC3CE2C-9433-4547-AB9F-38E013102018}" ShortID="640818936">
+									<Language>SFX</Language>
+									<AudioFile>Fight Meow.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fight Meow" ID="{8FC3CE2C-9433-4547-AB9F-38E013102018}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cries of Pain 2" ID="{3C5F06F8-66FD-4060-AF19-7196511B3C1B}" ShortID="585721613">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cries of Pain 2" ID="{E389693A-8C95-4940-BA64-9131787DF196}" ShortID="74126020">
+									<Language>SFX</Language>
+									<AudioFile>Cries of Pain 2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cries of Pain 2" ID="{E389693A-8C95-4940-BA64-9131787DF196}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Defeat Sigh" ID="{F0B8D564-B05A-40AC-A81F-7E8444D778CD}" ShortID="910114997">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" ShortID="84381778">
+									<Language>SFX</Language>
+									<AudioFile>Defeat Sigh.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" ShortID="444423991">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" ShortID="795155662">
+									<Language>SFX</Language>
+									<AudioFile>Growl 2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" ShortID="382760088">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Growl 1" ID="{7405C0E4-4DC4-4DCC-AFE8-3B1B61524D7E}" ShortID="653191822">
+									<Language>SFX</Language>
+									<AudioFile>Growl 1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Growl 1" ID="{7405C0E4-4DC4-4DCC-AFE8-3B1B61524D7E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" ShortID="549703500">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" ShortID="559390341">
+									<Language>SFX</Language>
+									<AudioFile>Happy Purr.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Purrs" ID="{D683DFE3-03F6-4496-AF3C-B39FE379EED3}" ShortID="318513775">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Purrs 1" ID="{49E80195-EE17-4E3B-A7B5-B4994020AD8C}" ShortID="573551727">
+									<Language>SFX</Language>
+									<AudioFile>Purrs 1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Purrs 1" ID="{49E80195-EE17-4E3B-A7B5-B4994020AD8C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Purrs 1" ID="{49E80195-EE17-4E3B-A7B5-B4994020AD8C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Fight Meow" ID="{A0AECE0E-8FE6-478A-9AB0-579262B08F1D}" ShortID="489783593">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
+				</Folder>
+				<Folder Name="Monster Sounds" ID="{5DE7F8FE-F1E6-4449-886A-A17BCB96A442}" ShortID="879085402">
 					<ChildrenList>
-						<AudioFileSource Name="Fight Meow" ID="{8FC3CE2C-9433-4547-AB9F-38E013102018}" ShortID="640818936">
-							<Language>SFX</Language>
-							<AudioFile>Fight Meow.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="Box Monster Growl" ID="{B724F851-7BE1-4256-9744-22BC7A2E0421}" ShortID="736935007">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Box Monster Growl" ID="{1BAE5C42-ECBF-4F28-8D77-83B9154F5AC6}" ShortID="652777174">
+									<Language>SFX</Language>
+									<AudioFile>Box Monster Growl.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Box Monster Growl" ID="{1BAE5C42-ECBF-4F28-8D77-83B9154F5AC6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Box Monster Growl 2" ID="{DFEC2F02-22FE-4DE9-B9FD-A599C14EB714}" ShortID="628109156">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Box Monster Growl 2" ID="{F7025173-76C1-4D1D-AD0F-045B29B80B32}" ShortID="980839258">
+									<Language>SFX</Language>
+									<AudioFile>Box Monster Growl 2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Box Monster Growl 2" ID="{F7025173-76C1-4D1D-AD0F-045B29B80B32}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Box Monster Growl 3" ID="{7D3EBC45-C431-4337-A940-04E390BE00BB}" ShortID="789182125">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" ShortID="470330805">
+									<Language>SFX</Language>
+									<AudioFile>Box Monster Growl 3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Box Monster Hit Hurt" ID="{A1BB8AB6-D825-47C0-B808-FB1F1224D9C7}" ShortID="272030">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Box Monster Hit Hurt" ID="{8D2B2F8A-8958-4393-8516-2B78A97754FB}" ShortID="194411888">
+									<Language>SFX</Language>
+									<AudioFile>Box Monster Hit Hurt.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Box Monster Hit Hurt" ID="{8D2B2F8A-8958-4393-8516-2B78A97754FB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Fight Meow" ID="{8FC3CE2C-9433-4547-AB9F-38E013102018}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Growl_1" ID="{707CFB22-A1C3-48C9-8D60-CF64C1A337FC}" ShortID="382760088">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
+				</Folder>
+				<Folder Name="Music" ID="{41D9B949-F522-47D9-AA28-B7242DBB3CBA}" ShortID="704195788">
 					<ChildrenList>
-						<AudioFileSource Name="Growl 1" ID="{7405C0E4-4DC4-4DCC-AFE8-3B1B61524D7E}" ShortID="653191822">
-							<Language>SFX</Language>
-							<AudioFile>Growl 1.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" ShortID="939876573">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Battle Music V2" ID="{B1601A3C-5AE8-4275-B247-9BC9DB875C3F}" ShortID="11583260">
+									<Language>SFX</Language>
+									<AudioFile>Battle Music V2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Battle Music V2" ID="{B1601A3C-5AE8-4275-B247-9BC9DB875C3F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Growl 1" ID="{7405C0E4-4DC4-4DCC-AFE8-3B1B61524D7E}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Cries of Pain 2" ID="{3C5F06F8-66FD-4060-AF19-7196511B3C1B}" ShortID="585721613">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
+				</Folder>
+				<Folder Name="Ambiences" ID="{8F34152E-41C4-4B70-913E-E0927C6842E4}" ShortID="584510827">
 					<ChildrenList>
-						<AudioFileSource Name="Cries of Pain 2" ID="{E389693A-8C95-4940-BA64-9131787DF196}" ShortID="74126020">
-							<Language>SFX</Language>
-							<AudioFile>Cries of Pain 2.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" ShortID="845543312">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" ShortID="652642085">
+									<Language>SFX</Language>
+									<AudioFile>Cityscape.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Cries of Pain 2" ID="{E389693A-8C95-4940-BA64-9131787DF196}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Battle Music V2" ID="{06B2F279-94F6-4D02-8655-8F48ADDC424C}" ShortID="939876573">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Battle Music V2" ID="{B1601A3C-5AE8-4275-B247-9BC9DB875C3F}" ShortID="11583260">
-							<Language>SFX</Language>
-							<AudioFile>Battle Music V2.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Battle Music V2" ID="{B1601A3C-5AE8-4275-B247-9BC9DB875C3F}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Cityscape" ID="{34D863CD-635B-42CA-BF46-193827B4D91F}" ShortID="845543312">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" ShortID="652642085">
-							<Language>SFX</Language>
-							<AudioFile>Cityscape.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Cityscape" ID="{08E64342-776F-4AC8-BD2F-E16930800EB7}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Defeat Sigh" ID="{F0B8D564-B05A-40AC-A81F-7E8444D778CD}" ShortID="910114997">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" ShortID="84381778">
-							<Language>SFX</Language>
-							<AudioFile>Defeat Sigh.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Defeat Sigh" ID="{7E383A1A-8A20-4FA2-A32C-58301D22D3C0}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Growl 2" ID="{92817B2E-849F-47A9-AED2-526B55F05F4E}" ShortID="444423991">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" ShortID="795155662">
-							<Language>SFX</Language>
-							<AudioFile>Growl 2.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Growl 2" ID="{C2992732-F449-47C6-BD05-E8A5D39F6DBB}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Happy Purr" ID="{BD17D501-ACF9-425C-9795-E8633FAC6181}" ShortID="549703500">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" ShortID="559390341">
-							<Language>SFX</Language>
-							<AudioFile>Happy Purr.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Box Monster Growl" ID="{B724F851-7BE1-4256-9744-22BC7A2E0421}" ShortID="736935007">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Box Monster Growl" ID="{1BAE5C42-ECBF-4F28-8D77-83B9154F5AC6}" ShortID="652777174">
-							<Language>SFX</Language>
-							<AudioFile>Box Monster Growl.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Box Monster Growl" ID="{1BAE5C42-ECBF-4F28-8D77-83B9154F5AC6}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Box Monster Growl 2" ID="{DFEC2F02-22FE-4DE9-B9FD-A599C14EB714}" ShortID="628109156">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Box Monster Growl 2" ID="{F7025173-76C1-4D1D-AD0F-045B29B80B32}" ShortID="980839258">
-							<Language>SFX</Language>
-							<AudioFile>Box Monster Growl 2.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Box Monster Growl 2" ID="{F7025173-76C1-4D1D-AD0F-045B29B80B32}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Box Monster Growl 3" ID="{7D3EBC45-C431-4337-A940-04E390BE00BB}" ShortID="789182125">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" ShortID="470330805">
-							<Language>SFX</Language>
-							<AudioFile>Box Monster Growl 3.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Box Monster Hit Hurt" ID="{A1BB8AB6-D825-47C0-B808-FB1F1224D9C7}" ShortID="272030">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Box Monster Hit Hurt" ID="{8D2B2F8A-8958-4393-8516-2B78A97754FB}" ShortID="194411888">
-							<Language>SFX</Language>
-							<AudioFile>Box Monster Hit Hurt.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Box Monster Hit Hurt" ID="{8D2B2F8A-8958-4393-8516-2B78A97754FB}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

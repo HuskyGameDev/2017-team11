@@ -16,19 +16,19 @@
 			<ShortName>Cataclysm_Sound_Bank</ShortName>
 			<Path>Cataclysm_Sound_Bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music" MaxAttenuation="0.000000"/>
-				<Event Id="2298775697" Name="Box_Monster_Growl" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl"/>
-				<Event Id="3076254102" Name="Box_Monster_Growl_Long" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl_Long"/>
-				<Event Id="546094842" Name="Box_Monster_Growl_Short" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl_Short"/>
-				<Event Id="728438429" Name="Box_Monster_Hurt" ObjectPath="\Events\Default Work Unit\Box_Monster_Hurt"/>
-				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat_Fight_Meow"/>
-				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat_Growl"/>
-				<Event Id="3166863326" Name="Cat_Growl_2" ObjectPath="\Events\Default Work Unit\Cat_Growl_2"/>
-				<Event Id="775186441" Name="Cat_Pain_Meow" ObjectPath="\Events\Default Work Unit\Cat_Pain_Meow"/>
-				<Event Id="3636054434" Name="Cat_Purrs" ObjectPath="\Events\Default Work Unit\Cat_Purrs"/>
-				<Event Id="3276472951" Name="City_Ambience" ObjectPath="\Events\Default Work Unit\City_Ambience"/>
-				<Event Id="3473977150" Name="Defeat_Sigh" ObjectPath="\Events\Default Work Unit\Defeat_Sigh"/>
-				<Event Id="88045260" Name="Happy_Purrs" ObjectPath="\Events\Default Work Unit\Happy_Purrs"/>
+				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Music\Battle_Music" MaxAttenuation="0.000000"/>
+				<Event Id="2298775697" Name="Box_Monster_Growl" ObjectPath="\Events\Default Work Unit\Monster Sounds\Box_Monster_Growl"/>
+				<Event Id="3076254102" Name="Box_Monster_Growl_Long" ObjectPath="\Events\Default Work Unit\Monster Sounds\Box_Monster_Growl_Long"/>
+				<Event Id="546094842" Name="Box_Monster_Growl_Short" ObjectPath="\Events\Default Work Unit\Monster Sounds\Box_Monster_Growl_Short"/>
+				<Event Id="728438429" Name="Box_Monster_Hurt" ObjectPath="\Events\Default Work Unit\Monster Sounds\Box_Monster_Hurt"/>
+				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat Sounds\Cat_Fight_Meow"/>
+				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat Sounds\Cat_Growl"/>
+				<Event Id="3166863326" Name="Cat_Growl_2" ObjectPath="\Events\Default Work Unit\Cat Sounds\Cat_Growl_2"/>
+				<Event Id="775186441" Name="Cat_Pain_Meow" ObjectPath="\Events\Default Work Unit\Cat Sounds\Cat_Pain_Meow"/>
+				<Event Id="3636054434" Name="Cat_Purrs" ObjectPath="\Events\Default Work Unit\Cat Sounds\Cat_Purrs"/>
+				<Event Id="3276472951" Name="City_Ambience" ObjectPath="\Events\Default Work Unit\Ambiences\City_Ambience"/>
+				<Event Id="3473977150" Name="Defeat_Sigh" ObjectPath="\Events\Default Work Unit\Cat Sounds\Defeat_Sigh"/>
+				<Event Id="88045260" Name="Happy_Purrs" ObjectPath="\Events\Default Work Unit\Cat Sounds\Happy_Purrs"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="74126020" Language="SFX">
