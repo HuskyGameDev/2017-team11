@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	775186441	Cat_Pain_Meow			\Default Work Unit\Cat_Pain_Meow	
 	2298775697	Box_Monster_Growl			\Default Work Unit\Box_Monster_Growl	
 	2776714809	Cat_Growl			\Default Work Unit\Cat_Growl	
+	3076254102	Box_Monster_Growl_Long			\Default Work Unit\Box_Monster_Growl_Long	
 	3166863326	Cat_Growl_2			\Default Work Unit\Cat_Growl_2	
 	3276472951	City_Ambience			\Default Work Unit\City_Ambience	
 	3473977150	Defeat_Sigh			\Default Work Unit\Defeat_Sigh	
@@ -15,6 +16,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11583260	Battle Music V2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Battle Music V2_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Battle Music V2		4838544
 	74126020	Cries of Pain 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Cries of Pain 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cries of Pain 2		172920
 	84381778	Defeat Sigh	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Defeat Sigh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Defeat Sigh		617544
+	470330805	Box Monster Growl 3	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Box Monster Growl 3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Box Monster Growl 3		583916
 	559390341	Happy Purr	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Happy Purr_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Happy Purr		264744
 	573551727	Purrs	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Purrs 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Purrs		4406520
 	640818936	Fight Meow	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Fight Meow_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fight Meow		172920

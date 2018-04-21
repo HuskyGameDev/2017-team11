@@ -218,6 +218,25 @@
 						<ActiveSource Name="Box Monster Growl 2" ID="{F7025173-76C1-4D1D-AD0F-045B29B80B32}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Box Monster Growl 3" ID="{7D3EBC45-C431-4337-A940-04E390BE00BB}" ShortID="789182125">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" ShortID="470330805">
+							<Language>SFX</Language>
+							<AudioFile>Box Monster Growl 3.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
