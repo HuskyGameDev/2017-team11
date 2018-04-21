@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID BOX_MONSTER_GROWL = 2298775697U;
         static const AkUniqueID BOX_MONSTER_GROWL_LONG = 3076254102U;
         static const AkUniqueID BOX_MONSTER_GROWL_SHORT = 546094842U;
+        static const AkUniqueID BOX_MONSTER_HURT = 728438429U;
         static const AkUniqueID CAT_FIGHT_MEOW = 261597827U;
         static const AkUniqueID CAT_GROWL = 2776714809U;
         static const AkUniqueID CAT_GROWL_2 = 3166863326U;

@@ -171,6 +171,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Box_Monster_Hurt" ID="{042B1E30-B1EE-4CF7-B188-6DBB6C2B658E}">
+					<ChildrenList>
+						<Action Name="" ID="{C04973BF-4308-4CB7-A377-88946AF844AA}" ShortID="536730440">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Box Monster Hit Hurt" ID="{A1BB8AB6-D825-47C0-B808-FB1F1224D9C7}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -20,6 +20,7 @@
 						<ObjectRef Name="Happy_Purrs" ID="{EE7C3997-B4B0-4875-8129-1691F0AB7EF4}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Box_Monster_Growl" ID="{BD80D5ED-BB43-4982-ACB2-E1427847905A}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Pain_Meow" ID="{314A7934-CE62-4982-8B3A-E26DC7C29F75}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Box_Monster_Hurt" ID="{042B1E30-B1EE-4CF7-B188-6DBB6C2B658E}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Purrs" ID="{7698AC56-8C80-4D1E-9490-AD1F4B74EC09}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Growl_2" ID="{6503C5E5-33E5-4FDD-B355-D84F5308BD2F}" WorkUnitID="{064EBFB6-81E9-4C6D-97E9-9F2F07A9907B}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

@@ -237,6 +237,25 @@
 						<ActiveSource Name="Box Monster Growl 3" ID="{7DEA12B8-6745-4926-BA75-8146798368D2}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Box Monster Hit Hurt" ID="{A1BB8AB6-D825-47C0-B808-FB1F1224D9C7}" ShortID="272030">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Box Monster Hit Hurt" ID="{8D2B2F8A-8958-4393-8516-2B78A97754FB}" ShortID="194411888">
+							<Language>SFX</Language>
+							<AudioFile>Box Monster Hit Hurt.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Box Monster Hit Hurt" ID="{8D2B2F8A-8958-4393-8516-2B78A97754FB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
