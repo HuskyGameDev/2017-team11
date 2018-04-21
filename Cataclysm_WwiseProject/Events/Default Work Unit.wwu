@@ -129,6 +129,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Box_Monster_Growl" ID="{BD80D5ED-BB43-4982-ACB2-E1427847905A}">
+					<ChildrenList>
+						<Action Name="" ID="{0863D9C3-6E18-40F5-BE83-33A9C2E1407C}" ShortID="546102918">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Box Monster Growl" ID="{B724F851-7BE1-4256-9744-22BC7A2E0421}" WorkUnitID="{9F375E3A-E3E4-45B5-B27A-4CB71EA71DC5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

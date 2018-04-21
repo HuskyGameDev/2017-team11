@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BATTLE_MUSIC = 3832016031U;
+        static const AkUniqueID BOX_MONSTER_GROWL = 2298775697U;
         static const AkUniqueID CAT_FIGHT_MEOW = 261597827U;
         static const AkUniqueID CAT_GROWL = 2776714809U;
         static const AkUniqueID CAT_GROWL_2 = 3166863326U;

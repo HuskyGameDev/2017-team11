@@ -17,6 +17,7 @@
 			<Path>Cataclysm_Sound_Bank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music"/>
+				<Event Id="2298775697" Name="Box_Monster_Growl" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl"/>
 				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat_Fight_Meow"/>
 				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat_Growl"/>
 				<Event Id="3166863326" Name="Cat_Growl_2" ObjectPath="\Events\Default Work Unit\Cat_Growl_2"/>
@@ -54,6 +55,10 @@
 				<File Id="652642085" Language="SFX">
 					<ShortName>Cityscape.wav</ShortName>
 					<Path>SFX\Cityscape_F17FB28C.wem</Path>
+				</File>
+				<File Id="652777174" Language="SFX">
+					<ShortName>Box Monster Growl.wav</ShortName>
+					<Path>SFX\Box Monster Growl_1C9C67B2.wem</Path>
 				</File>
 				<File Id="653191822" Language="SFX">
 					<ShortName>Growl 1.wav</ShortName>

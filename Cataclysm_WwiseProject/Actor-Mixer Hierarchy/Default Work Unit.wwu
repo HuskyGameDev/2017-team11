@@ -180,6 +180,25 @@
 						<ActiveSource Name="Happy Purr" ID="{656E5179-6849-412A-AD92-56F1D94F1D04}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Box Monster Growl" ID="{B724F851-7BE1-4256-9744-22BC7A2E0421}" ShortID="736935007">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53E35499-27A1-4B9B-A08A-B686AE36DC6F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85C415A5-79D6-415F-ADF7-F5B1C2570998}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Box Monster Growl" ID="{1BAE5C42-ECBF-4F28-8D77-83B9154F5AC6}" ShortID="652777174">
+							<Language>SFX</Language>
+							<AudioFile>Box Monster Growl.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Box Monster Growl" ID="{1BAE5C42-ECBF-4F28-8D77-83B9154F5AC6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
