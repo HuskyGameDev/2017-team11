@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{67B332E5-CB3C-4172-A980-728FEA27AFE4}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Husky Games\SFX\Purrs"/>
+				<Property Name="Event Action List\{042B1E30-B1EE-4CF7-B188-6DBB6C2B658E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{314A7934-CE62-4982-8B3A-E26DC7C29F75}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{35E4590C-6019-43AC-B842-A834F826E1E3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5FF64D74-118A-45FC-B66B-F1F620977039}\x64_Expand States" Type="string" Value=""/>

@@ -3,42 +3,42 @@
 	<Platform GUID="{FE985549-61FE-4110-8188-F4C2ED14200F}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Cataclysm_Sound_Bank" Hash="2795205260" Timestamp="131688057458578739"/>
+				<File Name="Cataclysm_Sound_Bank" Hash="4048155273" Timestamp="131688062358241999"/>
 				<File Name="Init" Hash="2547431224" Timestamp="131688052074059036"/>
 				<File Name="PrimarySoundBank" Hash="1739925060" Timestamp="131632837017115851"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1226748816" Timestamp="131688057458738754"/>
+				<File Name="" Hash="1681396774" Timestamp="131688062358554530"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{4FD16D90-3B16-44D5-AECB-7A5D81B49D2E}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Cataclysm_Sound_Bank" Hash="2795205260" Timestamp="131688057460730099"/>
+				<File Name="Cataclysm_Sound_Bank" Hash="4048155273" Timestamp="131688062360037036"/>
 				<File Name="Init" Hash="2403855257" Timestamp="131688052080258206"/>
 				<File Name="PrimarySoundBank" Hash="1739925060" Timestamp="131632837018914311"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="293386909" Timestamp="131688057460990272"/>
+				<File Name="" Hash="2440119929" Timestamp="131688062360287209"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{7BC9C2CD-21DB-4BC7-8DC8-F9525DB3B2A2}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Cataclysm_Sound_Bank" Hash="2795205260" Timestamp="131688057459474247"/>
+				<File Name="Cataclysm_Sound_Bank" Hash="4048155273" Timestamp="131688062359271530"/>
 				<File Name="Init" Hash="580030591" Timestamp="131688052076890940"/>
 				<File Name="PrimarySoundBank" Hash="1739925060" Timestamp="131632837018138774"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3659091971" Timestamp="131688057459614345"/>
+				<File Name="" Hash="809104591" Timestamp="131688062359406626"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

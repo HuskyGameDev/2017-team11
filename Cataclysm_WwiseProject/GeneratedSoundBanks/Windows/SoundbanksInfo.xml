@@ -16,7 +16,7 @@
 			<ShortName>Cataclysm_Sound_Bank</ShortName>
 			<Path>Cataclysm_Sound_Bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music"/>
+				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music" MaxAttenuation="0.000000"/>
 				<Event Id="2298775697" Name="Box_Monster_Growl" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl"/>
 				<Event Id="3076254102" Name="Box_Monster_Growl_Long" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl_Long"/>
 				<Event Id="546094842" Name="Box_Monster_Growl_Short" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl_Short"/>
@@ -31,10 +31,6 @@
 				<Event Id="88045260" Name="Happy_Purrs" ObjectPath="\Events\Default Work Unit\Happy_Purrs"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="11583260" Language="SFX">
-					<ShortName>Battle Music V2.wav</ShortName>
-					<Path>SFX\Battle Music V2_F17FB28C.wem</Path>
-				</File>
 				<File Id="74126020" Language="SFX">
 					<ShortName>Cries of Pain 2.wav</ShortName>
 					<Path>SFX\Cries of Pain 2_1C9C67B2.wem</Path>
