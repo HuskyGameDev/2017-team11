@@ -3,6 +3,7 @@ using AI;
 using Entity;
 using Registry.Monster;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <inheritdoc />
 /// <summary>
@@ -20,8 +21,16 @@ public class RoundController : MonoBehaviour
     public GameEntity[] EnemyEntities;
     public GameEntity[] CatEntities;
     public IEntityTurnController EnemyAiController;
+    public GameObject CatHealthbar;
+    public GameObject EnemyHealthbar;
+    public GameObject CatArmorbar;
+    public GameObject EnemyArmorbar;
 
     private float _combatOverTimer;
+    private Image _catHealthbar;
+    private Image _enemyHealthbar;
+    private Image _catArmorbar;
+    private Image _enemyArmorbar;
 
     private void Awake() => Instance = this;
     private void OnDestroy() => Instance = null;
@@ -31,11 +40,31 @@ public class RoundController : MonoBehaviour
         EnemyAiController = GetComponent<EnemyAi>();
         EnemyEntities[0].SetEntity(MonsterRegistry.GetRandomMonsterEntity(Region.City, Rarity.Common));
         CatEntities[0].SetEntity(PlayerController.Instance.Cats[0]);
+        _catHealthbar = CatHealthbar.GetComponent<Image>();
+        _enemyHealthbar = EnemyHealthbar.GetComponent<Image>();
+        _catArmorbar = CatArmorbar.GetComponent<Image>();
+        _enemyArmorbar = EnemyArmorbar.GetComponent<Image>();
         //AkSoundEngine.PostEvent("Battle_Music", gameObject);
     }
 
     private void Update()
     {
+        // update UI
+        if (CatEntities.Length > 0 && CatEntities[0].MyEntity != null)
+        {
+            _catHealthbar.fillAmount =
+                (float) CatEntities[0].MyEntity.HitPoints.Current / CatEntities[0].MyEntity.HitPoints.Maximum;
+            _catArmorbar.fillAmount =
+                (float) CatEntities[0].MyEntity.Armor.Current / CatEntities[0].MyEntity.Armor.Maximum;
+        }
+        if (EnemyEntities.Length > 0 && EnemyEntities[0].MyEntity != null)
+        {
+            _enemyHealthbar.fillAmount =
+                (float) EnemyEntities[0].MyEntity.HitPoints.Current / EnemyEntities[0].MyEntity.HitPoints.Maximum;
+            _enemyArmorbar.fillAmount =
+                (float) EnemyEntities[0].MyEntity.Armor.Current / EnemyEntities[0].MyEntity.Armor.Maximum;
+        }
+        // Process Combat
         if (IsCombatOver)
         {
             _combatOverTimer += Time.deltaTime;

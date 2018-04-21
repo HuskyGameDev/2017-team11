@@ -78,7 +78,7 @@ namespace Entity {
             if (newSprite == null)
                 return;
             _renderer.sprite = newSprite;
-            _wCache = 0; // force a re-position    
+            _wCache = 0; // force a re-position
         }
         
         public Move GetAttackMove(byte attackIndex)
