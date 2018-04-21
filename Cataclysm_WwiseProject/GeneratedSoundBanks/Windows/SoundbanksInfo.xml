@@ -18,6 +18,7 @@
 			<IncludedEvents>
 				<Event Id="3832016031" Name="Battle_Music" ObjectPath="\Events\Default Work Unit\Battle_Music"/>
 				<Event Id="2298775697" Name="Box_Monster_Growl" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl"/>
+				<Event Id="546094842" Name="Box_Monster_Growl_Short" ObjectPath="\Events\Default Work Unit\Box_Monster_Growl_Short"/>
 				<Event Id="261597827" Name="Cat_Fight_Meow" ObjectPath="\Events\Default Work Unit\Cat_Fight_Meow"/>
 				<Event Id="2776714809" Name="Cat_Growl" ObjectPath="\Events\Default Work Unit\Cat_Growl"/>
 				<Event Id="3166863326" Name="Cat_Growl_2" ObjectPath="\Events\Default Work Unit\Cat_Growl_2"/>
@@ -67,6 +68,10 @@
 				<File Id="795155662" Language="SFX">
 					<ShortName>Growl 2.wav</ShortName>
 					<Path>SFX\Growl 2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="980839258" Language="SFX">
+					<ShortName>Box Monster Growl 2.wav</ShortName>
+					<Path>SFX\Box Monster Growl 2_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

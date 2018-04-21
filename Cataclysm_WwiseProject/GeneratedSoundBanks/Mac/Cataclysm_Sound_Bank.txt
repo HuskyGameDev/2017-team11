@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	88045260	Happy_Purrs			\Default Work Unit\Happy_Purrs	
 	261597827	Cat_Fight_Meow			\Default Work Unit\Cat_Fight_Meow	
+	546094842	Box_Monster_Growl_Short			\Default Work Unit\Box_Monster_Growl_Short	
 	775186441	Cat_Pain_Meow			\Default Work Unit\Cat_Pain_Meow	
 	2298775697	Box_Monster_Growl			\Default Work Unit\Box_Monster_Growl	
 	2776714809	Cat_Growl			\Default Work Unit\Cat_Growl	
@@ -21,4 +22,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	652777174	Box Monster Growl	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Box Monster Growl_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Box Monster Growl		352944
 	653191822	Growl_1	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Growl 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl_1		264792
 	795155662	Growl 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Growl 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Growl 2		419140
+	980839258	Box Monster Growl 2	C:\Users\sjcalver\Documents\GitHub\2017-team11\Cataclysm_WwiseProject\.cache\Mac\SFX\Box Monster Growl 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Box Monster Growl 2		352944
 
